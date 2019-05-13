@@ -3157,6 +3157,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['data'],
   data: function data() {
@@ -41177,7 +41178,7 @@ var render = function() {
                                               _c(
                                                 "label",
                                                 { staticClass: "font-admin" },
-                                                [_vm._v("Название")]
+                                                [_vm._v("Вопрос")]
                                               ),
                                               _vm._v(" "),
                                               _c("input", {
@@ -41194,7 +41195,7 @@ var render = function() {
                                                   "form-control font-admin",
                                                 attrs: {
                                                   type: "text",
-                                                  placeholder: "Название"
+                                                  placeholder: "Вопрос"
                                                 },
                                                 domProps: {
                                                   value: question.question
@@ -41215,6 +41216,12 @@ var render = function() {
                                                 }
                                               })
                                             ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "label",
+                                            { staticClass: "font-admin" },
+                                            [_vm._v("Ответ")]
                                           ),
                                           _vm._v(" "),
                                           _c("editor", {
@@ -41332,7 +41339,7 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "form-group w-100 mt-3" }, [
                   _c("label", { staticClass: "font-admin" }, [
-                    _vm._v("Название")
+                    _vm._v("Вопрос")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -41345,7 +41352,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "form-control font-admin",
-                    attrs: { type: "text", placeholder: "Название" },
+                    attrs: { type: "text", placeholder: "Вопрос" },
                     domProps: { value: _vm.newQuestions.question },
                     on: {
                       input: function($event) {
@@ -41511,7 +41518,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "font-admin" }, [
-      _c("h6", [_vm._v("Текст")])
+      _c("h6", [_vm._v("Ответ")])
     ])
   },
   function() {

@@ -59,9 +59,10 @@
                                                             <div class="col-md-1"></div>
                                                             <div class="col-md-10">
                                                                 <div class="form-group w-100 mt-3">
-                                                                    <label class="font-admin">Название</label>
-                                                                    <input type="text" v-model="question.question" class="form-control font-admin" placeholder="Название">
+                                                                    <label class="font-admin">Вопрос</label>
+                                                                    <input type="text" v-model="question.question" class="form-control font-admin" placeholder="Вопрос">
                                                                 </div>
+                                                                <label class="font-admin">Ответ</label>
                                                                 <editor v-model="question.answer"
                                                                         api-key="f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v"
                                                                         plugins="advlist autolink link image lists charmap print preview"
@@ -110,11 +111,11 @@
                             <h4 class="card-title">Новый вопрос</h4>
                             <div class="row">
                                 <div class="form-group w-100 mt-3">
-                                    <label class="font-admin">Название</label>
-                                    <input type="text" v-model="newQuestions.question" class="form-control font-admin" placeholder="Название">
+                                    <label class="font-admin">Вопрос</label>
+                                    <input type="text" v-model="newQuestions.question" class="form-control font-admin" placeholder="Вопрос">
                                 </div>
                                 <div class="form-group w-100 mt-3">
-                                    <label class="font-admin"><h6>Текст</h6></label>
+                                    <label class="font-admin"><h6>Ответ</h6></label>
                                     <editor v-model="newQuestions.answer"
                                             api-key="f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v"
                                             plugins="advlist autolink link image lists charmap print preview"

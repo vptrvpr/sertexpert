@@ -43,6 +43,6 @@
 <script src="{{ env('APP_URL') }}/js/admin/off-canvas.js"></script>
 <script src="{{ env('APP_URL') }}/js/admin/misc.js"></script>
 <script src="{{ env('APP_URL') }}/js/admin/dashboard.js"></script>
-<script src="{{ env('APP_URL') }}/js/app.js?12"></script>
+<script src="{{ env('APP_URL') }}/js/app.js?123"></script>
 </body>
 </html>

@@ -6,14 +6,21 @@
             <section class="home">
                 <!--<div id="particles-js"></div>-->
                 <div class="home-content">
-                    <h1 class="hero-title banner-animation-start-page">Быстро.<br><span>Качественно. Надежно.</span>
-                    </h1>
-                    <p class="top_45 banner-animation-start-page">Компания SERTEXPERT оказывает услуги по оформлению<br>
-                        пакетов
-                        разрешительной документации.
-                        <span class="element" data-text1="Сертификация и декларирование."
-                              data-text2="Гигиенические документы."
-                              data-text3="Пожарная безопасность." data-loop="true" data-backdelay="1500"></span></p>
+                    <div class="row">
+                        <div class="col-md-6 col-9">
+                            <h1 class="hero-title banner-animation-start-page">Быстро.<br><span>Качественно. Надежно.</span>
+                            </h1>
+                            <p class="top_45 banner-animation-start-page">Компания SERTEXPERT оказывает услуги<br> по оформлению
+                                пакетов
+                                разрешительной документации.<br>
+                                <span class="element" data-text1="Сертификация и декларирование."
+                                      data-text2="Гигиенические документы."
+                                      data-text3="Пожарная безопасность." data-loop="true" data-backdelay="1500"></span></p>
+                        </div>
+                        <div class="col-md-6 col-3"></div>
+
+                    </div>
+
                     <div class="social animate-right">
                         <a class="text">социальные сети</a>
                         <div class="line"></div>
@@ -74,7 +81,7 @@
                                         <h3 class="text-center title-services mb-5 animate-second scroll-sertification">Сертификация по
                                             отраслям</h3>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-2 card_wrap industry-general mb-5" v-for="category in data[1].category">
+                                    <div class="col-xs-6 col-sm-3 col-md-2 col-6 card_wrap industry-general mb-5" v-for="category in data[1].category">
                                         <a class="industry-div" :data-remodal-target="'modal-'+category.id">
                                             <div class="li">
                                                 <div class="front">
@@ -153,7 +160,6 @@
     export default {
         props: [ 'data' ],
         mounted() {
-            console.log( this.data );
         }
     }
 </script>

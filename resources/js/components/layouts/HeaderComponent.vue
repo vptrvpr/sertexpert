@@ -26,10 +26,12 @@
                 <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-8">
                     <div class="nav-top-menu d-none d-sm-none d-md-none d-lg-none d-xl-flex">
                         <ul>
-                            <li class="top-menu-li d-inline-flex" v-if="!isGeneral"><a href="/">Главная</a></li>
                             <li class="top-menu-li d-inline-flex" v-if="isGeneral"><a id="btn-services" scroll=".scroll-services" href="#">Услуги</a></li>
                             <li class="top-menu-li d-inline-flex" v-if="isGeneral"><a id="btn-sertification" scroll=".scroll-sertification" href="#">Сертификация по отраслям</a></li>
                             <li class="top-menu-li d-inline-flex" v-if="isGeneral"><a id="btn-base" scroll=".scroll-base" href="#">Нормативная база</a></li>
+                            <li class="top-menu-li d-inline-flex" v-if="!isGeneral"><a id="btn-services-not-general" scroll=".scroll-services" href="/">Услуги</a></li>
+                            <li class="top-menu-li d-inline-flex" v-if="!isGeneral"><a id="btn-sertification-not-general" scroll=".scroll-sertification" href="/">Сертификация по отраслям</a></li>
+                            <li class="top-menu-li d-inline-flex" v-if="!isGeneral"><a id="btn-base-not-general" scroll=".scroll-base" href="/">Нормативная база</a></li>
                             <li class="top-menu-li d-inline-flex"><a href="/news">Новости</a></li>
                             <li class="top-menu-li d-inline-flex"><a href="/questions">Вопросы</a></li>
                             <li class="top-menu-li d-inline-flex"><a href="/about">О компании</a></li>
@@ -60,7 +62,12 @@
             <div class="full-inner row">
                 <nav class="col-md-8">
                     <ul>
-                        <li><a href="/">Главная</a></li>
+                        <li v-if="isGeneral"><a id="btn-services-mobile"  scroll=".scroll-services" href="#">Услуги</a></li>
+                        <li v-if="isGeneral"><a id="btn-sertification-mobile" scroll=".scroll-sertification" href="#">Сертификация по отраслям</a></li>
+                        <li v-if="isGeneral"><a id="btn-base-mobile" scroll=".scroll-base" href="#">Нормативная база</a></li>
+                        <li v-if="!isGeneral"><a id="btn-services-mobile-not-general"  scroll=".scroll-services" href="/">Услуги</a></li>
+                        <li v-if="!isGeneral"><a id="btn-sertification-mobile-not-general" scroll=".scroll-sertification" href="/">Сертификация по отраслям</a></li>
+                        <li v-if="!isGeneral"><a id="btn-base-mobile-not-general" scroll=".scroll-base" href="/">Нормативная база</a></li>
                         <li><a href="/news">Новости</a></li>
                         <li><a href="/questions">Вопросы</a></li>
                         <li><a href="/about">О компании</a></li>

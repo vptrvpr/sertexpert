@@ -1015,9 +1015,9 @@ header.white .nav-icon span {
 
 footer {
     width: 100%;
-    padding: 60px 0 41px;
+    padding: 30px 0 25px;
     position: fixed;
-    z-index: 0;
+    z-index: 999;
     bottom: 0;
     background: #efefef;
 }
@@ -1252,6 +1252,8 @@ footer .getintouch strong {
     -webkit-border-radius: 12px;
     box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
     -webkit-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.15);
+    height: 100%;
+    width: 100%;
 }
 
 .article-image {
@@ -1672,8 +1674,9 @@ textarea.form-message {
     }
 
     .home .home-content .hero-title {
-        font-size: 70px;
-        line-height: 64px;
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 39px;
     }
 
     .home .home-content p {
@@ -2489,7 +2492,7 @@ ScrollMagic
 
 
 .counter-title {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -2544,18 +2547,14 @@ input#name.txt2 {
 .bg-deep-sert {
     background: url('../images/sertexpert_bg.png') #ceab93;
     background-repeat: no-repeat;
-    max-height: 394px;
-    height: 393px;
+    height: 100%;
     background-position: center;
-}
-
-.sert2 {
-    padding-top: 70px;
 }
 
 .questions-section-title {
     color: #FFF !important;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 textarea:focus,
@@ -2647,7 +2646,7 @@ input[type="color"]:focus,
 }
 
 .logo{
-    height: 35px;
+    height: 55px;
 }
 
 .article-logo{
@@ -2676,12 +2675,130 @@ input[type="color"]:focus,
 
 .answer{
     padding: 20px;
-    background: #2A231F;
+    background: transparent;
+    border: 5px solid #C4A893;
     color: white;
 }
 
 .question-and-answer{
     box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);
+}
+
+@media screen and (min-width: 1200px) {
+    .home {
+        height: 800px;
+    }
+    .sert2{
+        padding-top: 80px;
+        margin-bottom: -30px;
+        padding-bottom: 40px;
+    }
+    .questions-2{
+        padding-top: 50px;
+        margin-bottom: -30px;
+    }
+
+}
+
+@media screen and (max-width: 1199px) {
+    .home {
+        height: 700px;
+    }
+    .sert2{
+        padding-top: 50px;
+        margin-bottom: -30px;
+        padding-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .home {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .home {
+        height: 450px;
+    }
+}
+
+.contacts-info {
+    color: #1E1A1A;
+    text-decoration: none;
+}
+
+.contacts-info:hover {
+    color: #CEAB93;
+    text-decoration: none;
+}
+
+.fixed{
+    position: fixed;
+}
+
+.text-white{
+    color: white;
+    font-weight: 500;
+}
+
+.questions-2{
+    background: url(../images/sertexpert_bg_pen.png) transparent;
+    background-size: cover !important;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat !important;
+}
+
+.txt2-2{
+    width: 70%;
+    border: 5px solid #fff;
+    background: rgba(230, 227, 227, 0.28);
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 11px;
+    padding: 8px 15px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    max-width: 100%;
+    resize: none;
+}
+
+.txt2-2::placeholder{
+    color: white;
+}
+
+.text-black{
+    color: black;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+.forma2button-2{
+    background-color: black;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 11px;
+    padding: 8px 15px;
+    width: 60%;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    max-width: 100%;
+    border-radius: 0 0 0 0;
+    resize: none;
+    font-weight: 600;
+    transition: ease .5s;
+    border: 2px solid #fff;
+}
+
+.alert-light-2{
+    color: #fefefe;
+    background-color: transparent;
+    border: 10px solid;
+    border-color: #fefefe;
+    border-radius: 0;
+    box-shadow: 5px 5px 8px 3px rgba(0,0,0,0.1);
 }
 
 

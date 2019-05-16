@@ -12,20 +12,20 @@ $( document ).ready( function () {
         },1000);
     } );
 
-    function fullhome() {
-        var hometext = $( '.home, .portfolio-hero' );
-//            var homett = $('.hero-title').offset();
-//            $('.social').css('margin-top', homett.top)
-        hometext.css( {
-            "height": "800px"
-        } );
-    }
+//     function fullhome() {
+//         var hometext = $( '.home, .portfolio-hero' );
+// //            var homett = $('.hero-title').offset();
+// //            $('.social').css('margin-top', homett.top)
+//         hometext.css( {
+//             "height": "800px"
+//         } );
+//     }
 
-    // HOME PAGE HEIGHT
-    if ( $( '.home, .portfolio-hero' ).length ) {
-        fullhome();
-        $( window ).resize( fullhome );
-    }
+    // // HOME PAGE HEIGHT
+    // if ( $( '.home, .portfolio-hero' ).length ) {
+    //     fullhome();
+    //     $( window ).resize( fullhome );
+    // }
 
 
     // HOME TYPED JS
@@ -235,26 +235,33 @@ $( document ).ready( function () {
 
     $(document).ready(function(){
         $('#btn-services').click( function(){ // ловим клик по ссылке с классом go_to
+            if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+                $( 'body' ).toggleClass( 'full-open' );
+            }
             var scroll_el = $(this).attr('scroll'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
             if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
                 $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 500); // анимируем скроолинг к элементу scroll_el
             }
             return false; // выключаем стандартное действие
         });
-    });
 
-    $(document).ready(function(){
+
         $('#btn-sertification').click( function(){ // ловим клик по ссылке с классом go_to
+            if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+                $( 'body' ).toggleClass( 'full-open' );
+            }
             var scroll_el = $(this).attr('scroll'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
             if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
                 $('html, body').animate({ scrollTop: $(scroll_el).offset().top-200 }, 500); // анимируем скроолинг к элементу scroll_el
             }
             return false; // выключаем стандартное действие
         });
-    });
 
-    $(document).ready(function(){
+
         $('#btn-base').click( function(){ // ловим клик по ссылке с классом go_to
+            if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+                $( 'body' ).toggleClass( 'full-open' );
+            }
             var scroll_el = $(this).attr('scroll'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
             if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
                 $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 500); // анимируем скроолинг к элементу scroll_el
@@ -262,6 +269,85 @@ $( document ).ready( function () {
             return false; // выключаем стандартное действие
         });
     });
+
+
+    $(document).ready(function(){
+        $('#btn-services-mobile').click( function(){ // ловим клик по ссылке с классом go_to
+            if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+                $( 'body' ).toggleClass( 'full-open' );
+            }
+            var scroll_el = $(this).attr('scroll'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+            if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+                $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 500); // анимируем скроолинг к элементу scroll_el
+            }
+            return false; // выключаем стандартное действие
+        });
+
+
+        $('#btn-sertification-mobile').click( function(){ // ловим клик по ссылке с классом go_to
+            if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+                $( 'body' ).toggleClass( 'full-open' );
+            }
+            var scroll_el = $(this).attr('scroll'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+            if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+                $('html, body').animate({ scrollTop: $(scroll_el).offset().top-200 }, 500); // анимируем скроолинг к элементу scroll_el
+            }
+            return false; // выключаем стандартное действие
+        });
+
+
+        $('#btn-base-mobile').click( function(){ // ловим клик по ссылке с классом go_to
+            if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+                $( 'body' ).toggleClass( 'full-open' );
+            }
+            var scroll_el = $(this).attr('scroll'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+            if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+                $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 500); // анимируем скроолинг к элементу scroll_el
+            }
+            return false; // выключаем стандартное действие
+        });
+    });
+
+    /**
+     * Desktop
+     */
+
+    $('#btn-services-not-general').click( function(){
+        $.cookie('btn-services-not-general',1);
+    });
+
+
+    $('#btn-sertification-not-general').click( function(){
+        $.cookie('btn-sertification-not-general',1);
+    });
+
+
+    $('#btn-base-not-general').click( function(){
+        $.cookie('btn-base-not-general',1);
+    });
+
+
+    /**
+     * Mobile
+     */
+
+    $('#btn-services-modile-not-general').click( function(){
+        $.cookie('btn-services-not-general',1);
+    });
+
+
+    $('#btn-sertification-mobile-not-general').click( function(){
+        $.cookie('btn-sertification-not-general',1);
+    });
+
+
+    $('#btn-base-mobile-not-general').click( function(){
+        $.cookie('btn-base-not-general',1);
+    });
+
+
+
+
 
 
     /**
@@ -354,6 +440,46 @@ $( document ).ready( function () {
             } );
         }
     } );
+
+
+    if ( $.cookie('btn-services-not-general') === '1' ) {
+
+        var scroll_el = $('.scroll-base'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 1000); // анимируем скроолинг к элементу scroll_el
+        }
+        $.cookie('btn-services-not-general',null);
+        return false; // выключаем стандартное действие
+
+
+    }
+
+    if ( $.cookie('btn-sertification-not-general') === '1' ) {
+
+        var scroll_el = $('.scroll-base'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 1000); // анимируем скроолинг к элементу scroll_el
+        }
+        $.cookie('btn-sertification-not-general','2');
+
+        return false; // выключаем стандартное действие
+
+    }
+
+    if ( $.cookie('btn-base-not-general') === '1' ) {
+
+        var scroll_el = $('.scroll-base'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 1000); // анимируем скроолинг к элементу scroll_el
+        }
+
+        $.cookie('btn-base-not-general','2');
+
+        return false; // выключаем стандартное действие
+
+    }
+
+
 
 
 

@@ -10,7 +10,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{env('APP_URL')}}css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}css/colors/red.css"/>
-    <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css"/>
+    <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css?12"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal-default-theme.css">
 
@@ -33,8 +33,7 @@
     @yield('content')
 </div>
 
-<script type="text/javascript" src="{{env('APP_URL')}}js/app.js"></script>
-{{--<script type="text/javascript" src="https://spikmi.com/Widget?Id=820"></script>--}}
+<script type="text/javascript" src="{{env('APP_URL')}}js/app.js?12"></script>
 <script src="{{env('APP_URL')}}js/jquery-2.1.4.min.js"></script>
 <script src="{{env('APP_URL')}}js/remodal.js"></script>
 <script type="text/javascript" src="{{env('APP_URL')}}js/rotate3Di-master/jquery-css-transform/j-c-t.js"></script>
@@ -45,7 +44,8 @@
 <script src="{{env('APP_URL')}}js/particles.js"></script>
 <script src="{{env('APP_URL')}}js/app-particels.js"></script>
 <script src="{{env('APP_URL')}}js/jquery.hover3d.js"></script>
-<script src="{{env('APP_URL')}}js/main.js"></script>
+<script src="{{env('APP_URL')}}js/coockie.js"></script>
+<script src="{{env('APP_URL')}}js/main.js?12"></script>
 <script src="{{env('APP_URL')}}js/animatedModal.js"></script>
 
 </body>

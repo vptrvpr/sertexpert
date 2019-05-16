@@ -30,7 +30,9 @@ class ContactsController extends Controller
         $newContact = new Contact();
         $newContact->city = $contact['city'];
         $newContact->map = $contact['map'];
-        $newContact->text = $contact['text'];
+        $newContact->address = $contact['address'];
+        $newContact->phone = $contact['phone'];
+        $newContact->email = $contact['email'];
         $newContact->save();
 
     }
@@ -47,7 +49,9 @@ class ContactsController extends Controller
 
         $editContact->city = $contact['city'];
         $editContact->map = $contact['map'];
-        $editContact->text = $contact['text'];
+        $editContact->address = $contact['address'];
+        $editContact->phone = $contact['phone'];
+        $editContact->email = $contact['email'];
         $editContact->save();
 
     }
@@ -59,5 +63,19 @@ class ContactsController extends Controller
     public function destroy($id)
     {
         Contact::where('id',$id)->delete();
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getContactByCity(){
+        $contact = Contact::where('city',$_COOKIE['city'])->first();
+
+        if(!$contact){
+            $contact = Contact::where('city','Санкт-Петербург')->first();
+        }
+
+        return $contact;
     }
 }

@@ -40,6 +40,7 @@ Vue.component('search-component', require('./components/pages/SearchComponent.vu
 Vue.component('header-component', require('./components/layouts/HeaderComponent').default);
 Vue.component('footer-component', require('./components/layouts/FooterComponent').default);
 Vue.component('questions-section-component', require('./components/layouts/QuestionsSectionComponent').default);
+Vue.component('questions-section-2-component', require('./components/layouts/QuestionsSection2Component.vue').default);
 
 
 /**

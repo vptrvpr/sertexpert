@@ -44,7 +44,7 @@
                 </section>
             </div> <!-- cont end -->
         </div> <!-- wrapper end -->
-        <questions-section-component></questions-section-component>
+        <questions-section-2-component></questions-section-2-component>
         <footer-component></footer-component>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
 
-    <section class="background bg-deep-sert sert2">
+    <section class="background bg-deep-sert sert2 questions-2 container">
         <div class="container">
             <div class="row position-relative">
                 <!-- counter -->
@@ -8,35 +8,38 @@
 
                 </div>
                 <div class="col-md-4 ml-auto col-sm-6 bottom-margin text-center mb-3">
-                    <span class="counter-title white-text questions-section-title"> Не знаете какой документ нужен именно
-                    вам?</span><br>
-                </div>
-                <!-- end counter -->
-                <!-- counter -->
-                <div class="col-md-4 ml-auto col-sm-6 text-center counter-section wow fadeInUp sm-margin-bottom-ten">
+                    <span class="counter-title white-text questions-section-title"><h5 class="text-black">ВОЗНИКЛИ ВОПРОСЫ?</h5>
+                    <h6 class="text-black">ЗАДАЙТЕ ЕГО НАШИМ СПЕЦИАЛИСТАМ.</h6></span><br>
                     <transition name="out-left-notif" mode="out-in">
                         <div v-if="!successSend" key="adasdaaaa">
-                            <input id="name" class="txt2" v-model="contacts.name" name="name" placeholder="Имя"
+                            <input id="name" class="txt2-2" v-model="contacts.name" name="name" placeholder="Имя"
                                    type="name"
                                    value="" required>
-                            <input id="phone" class="txt2" v-model="contacts.number" name="phone"
+                            <input id="phone" class="txt2-2" v-model="contacts.number" name="phone"
                                    placeholder="Номер телефона" type="phone" value="" required>
-                            <button class="forma2button btn" @click="sendSlackNotification"
-                                    :disabled="contacts.name !== '' || contacts.number !== '' ? disabled : ''">
+                            <textarea id="message" v-model="contacts.message" class="txt2-2" placeholder="Вопрос..."
+                                      required></textarea>
+                            <button class="forma2button-2 btn" @click="sendSlackNotification"
+                                    :disabled="contacts.name !== '' || contacts.number !== '' || contacts.message !== '' ? disabled : ''">
                                 Узнать сейчас
                             </button>
                             <br>
-                            <h6 class="text-white">Данные конфиденциальны
+                            <h6 class="text-black">Данные конфиденциальны
                                 и не передаются третьим лицам
                             </h6>
                         </div>
-                        <div class="alert alert-light" role="alert" v-else key="adasdaa"
+                        <div class="alert alert-light-2" role="alert" v-else key="adasdaa"
                              style="margin-top: 20px;">
                             <h3 class="notify-success-text-alert">Спасибо,
                                 ваша заявка принята!</h3>
                             <h4 class="notify-success-text-alert">Мы свяжемся с вами в ближайшее время.</h4>
                         </div>
                     </transition>
+                </div>
+                <!-- end counter -->
+                <!-- counter -->
+                <div class="col-md-4 ml-auto col-sm-6 text-center counter-section wow fadeInUp sm-margin-bottom-ten">
+
                 </div>
             </div>
         </div>
@@ -53,6 +56,7 @@
                 contacts: {
                     name: '',
                     number: '',
+                    message: ''
                 },
                 successSend: false,
                 errorSend: false
@@ -64,7 +68,7 @@
                 this.successSend = true;
                 axios( {
                     method: 'post',
-                    url: '/sender/contact-send',
+                    url: '/sender/contact-send-2',
                     data: { contacts: this.contacts }
                 } ).then( ( response ) => {
                     this.successSend = true;

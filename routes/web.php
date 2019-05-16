@@ -26,6 +26,7 @@ Route::get( '/contacts', 'PageController@contacts' )->name( 'contacts' );
  * sender
  */
 Route::post( '/sender/contact-send', 'SenderController@sendEmail' )->name( 'contacts' );
+Route::post( '/sender/contact-send-2', 'SenderController@sendEmail2' )->name( 'contacts2' );
 
 Auth::routes();
 Route::get( '/home', 'HomeController@index' )->name( 'home' );
@@ -70,3 +71,4 @@ Route::get('/contacts/get','ContactsController@get');
 Route::post('/contacts/create','ContactsController@create');
 Route::post('/contacts/edit','ContactsController@edit');
 Route::delete('/contacts/{id}','ContactsController@destroy');
+Route::get('/contacts/by-city','ContactsController@getContactByCity');

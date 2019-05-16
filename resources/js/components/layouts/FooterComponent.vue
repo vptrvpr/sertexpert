@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="footer-main">
         <footer>
             <div class="cont">
                 <div class="row">
@@ -20,8 +20,8 @@
                     <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">
                         <a href="#">
                             <strong>Контакты</strong><br>
-                            <a href="mailto:info@sertexpert.com">info@sertexpert.com</a><br>
-                            <a href="tel:+78126678889">+7 812 667 88 89</a>
+                            <a :href="'mailto:'+contact.email">{{contact.email}}</a><br>
+                            <a :href="'tel:'+contact.phone">{{contact.phone}}</a>
                         </a>
                     </div>
                 </div>
@@ -31,5 +31,27 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        data: function() {
+            return{
+                contact: ''
+            }
+
+        },
+        mounted() {
+            this.getContactByCity();
+        },
+        methods: {
+            getContactByCity: function (  ) {
+                axios({
+                    method: 'get',
+                    url: '/contacts/by-city'
+                }).then( (response) => {
+                    this.contact = response.data;
+                });
+
+            }
+        }
+
+    }
 </script>

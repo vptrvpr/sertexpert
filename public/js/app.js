@@ -2462,6 +2462,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['data'],
   data: function data() {
@@ -2471,7 +2477,9 @@ __webpack_require__.r(__webpack_exports__);
       newContact: {
         city: '',
         map: '',
-        text: ''
+        address: '',
+        phone: '',
+        email: ''
       }
     };
   },
@@ -2543,7 +2551,9 @@ __webpack_require__.r(__webpack_exports__);
         _this4.newContact = {
           city: '',
           map: '',
-          text: ''
+          address: '',
+          phone: '',
+          email: ''
         };
 
         _this4.getContact();
@@ -3293,7 +3303,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      contact: ''
+    };
+  },
+  mounted: function mounted() {
+    this.getContactByCity();
+  },
+  methods: {
+    getContactByCity: function getContactByCity() {
+      var _this = this;
+
+      axios({
+        method: 'get',
+        url: '/contacts/by-city'
+      }).then(function (response) {
+        _this.contact = response.data;
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -3306,6 +3337,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3416,6 +3454,98 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      contacts: {
+        name: '',
+        number: '',
+        message: ''
+      },
+      successSend: false,
+      errorSend: false
+    };
+  },
+  methods: {
+    sendSlackNotification: function sendSlackNotification() {
+      var _this = this;
+
+      this.successSend = true;
+      axios({
+        method: 'post',
+        url: '/sender/contact-send-2',
+        data: {
+          contacts: this.contacts
+        }
+      }).then(function (response) {
+        _this.successSend = true;
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layouts/QuestionsSectionComponent.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layouts/QuestionsSectionComponent.vue?vue&type=script&lang=js& ***!
@@ -3469,13 +3599,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       contacts: {
         name: '',
-        number: '',
-        message: ''
+        number: ''
       },
       successSend: false,
       errorSend: false
@@ -3609,6 +3742,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['article', 'url'],
   mounted: function mounted() {}
@@ -3625,6 +3763,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -3826,11 +3967,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['data'],
-  mounted: function mounted() {
-    console.log(this.data);
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -39675,140 +39821,234 @@ var render = function() {
                                     _c("div", { staticClass: "row" }, [
                                       _c("div", { staticClass: "col-md-1" }),
                                       _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "col-md-10" },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "form-group w-100 mt-3"
-                                            },
-                                            [
-                                              _c(
-                                                "label",
-                                                { staticClass: "font-admin" },
-                                                [_vm._v("Город")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("input", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: contact.city,
-                                                    expression: "contact.city"
-                                                  }
-                                                ],
-                                                staticClass:
-                                                  "form-control font-admin",
-                                                attrs: {
-                                                  type: "text",
-                                                  placeholder: "Город"
-                                                },
-                                                domProps: {
-                                                  value: contact.city
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      contact,
-                                                      "city",
-                                                      $event.target.value
-                                                    )
-                                                  }
+                                      _c("div", { staticClass: "col-md-10" }, [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "form-group w-100 mt-3"
+                                          },
+                                          [
+                                            _c(
+                                              "label",
+                                              { staticClass: "font-admin" },
+                                              [_vm._v("Город")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: contact.city,
+                                                  expression: "contact.city"
                                                 }
-                                              })
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            {
+                                              ],
                                               staticClass:
-                                                "form-group w-100 mt-3"
-                                            },
-                                            [
-                                              _c(
-                                                "label",
-                                                { staticClass: "font-admin" },
-                                                [_vm._v("Яндекс Карта")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("textarea", {
-                                                directives: [
-                                                  {
-                                                    name: "model",
-                                                    rawName: "v-model",
-                                                    value: contact.map,
-                                                    expression: "contact.map"
-                                                  }
-                                                ],
-                                                staticClass:
-                                                  "form-control font-admin",
-                                                attrs: {
-                                                  type: "text",
-                                                  placeholder: "Яндекс Карта",
-                                                  rows: "4"
-                                                },
-                                                domProps: {
-                                                  value: contact.map
-                                                },
-                                                on: {
-                                                  input: function($event) {
-                                                    if (
-                                                      $event.target.composing
-                                                    ) {
-                                                      return
-                                                    }
-                                                    _vm.$set(
-                                                      contact,
-                                                      "map",
-                                                      $event.target.value
-                                                    )
-                                                  }
-                                                }
-                                              })
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("editor", {
-                                            attrs: {
-                                              "api-key":
-                                                "f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v",
-                                              plugins:
-                                                "advlist autolink link image lists charmap print preview",
-                                              custom_colors: "true",
-                                              dialog_type: "modal",
-                                              selector: "textarea",
-                                              toolbar:
-                                                "forecolor backcolor | undo redo | styleselect | bold italic | link image | numlist bullist",
-                                              init: {
-                                                height: 600,
-                                                color_map: [
-                                                  "1E1A1A",
-                                                  "c3a993",
-                                                  "Default"
-                                                ]
-                                              }
-                                            },
-                                            model: {
-                                              value: contact.text,
-                                              callback: function($$v) {
-                                                _vm.$set(contact, "text", $$v)
+                                                "form-control font-admin",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Город"
                                               },
-                                              expression: "contact.text"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
+                                              domProps: { value: contact.city },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    contact,
+                                                    "city",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "form-group w-100 mt-3"
+                                          },
+                                          [
+                                            _c(
+                                              "label",
+                                              { staticClass: "font-admin" },
+                                              [_vm._v("Яндекс Карта")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("textarea", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: contact.map,
+                                                  expression: "contact.map"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "form-control font-admin",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Яндекс Карта",
+                                                rows: "4"
+                                              },
+                                              domProps: { value: contact.map },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    contact,
+                                                    "map",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "form-group w-100 mt-3"
+                                          },
+                                          [
+                                            _c(
+                                              "label",
+                                              { staticClass: "font-admin" },
+                                              [_vm._v("Адрес")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: contact.address,
+                                                  expression: "contact.address"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "form-control font-admin",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Город"
+                                              },
+                                              domProps: {
+                                                value: contact.address
+                                              },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    contact,
+                                                    "address",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "form-group w-100 mt-3"
+                                          },
+                                          [
+                                            _c(
+                                              "label",
+                                              { staticClass: "font-admin" },
+                                              [_vm._v("Телефон")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: contact.phone,
+                                                  expression: "contact.phone"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "form-control font-admin",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Город"
+                                              },
+                                              domProps: {
+                                                value: contact.phone
+                                              },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    contact,
+                                                    "phone",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "form-group w-100 mt-3"
+                                          },
+                                          [
+                                            _c(
+                                              "label",
+                                              { staticClass: "font-admin" },
+                                              [_vm._v("Почта")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("input", {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value: contact.email,
+                                                  expression: "contact.email"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "form-control font-admin",
+                                              attrs: {
+                                                type: "text",
+                                                placeholder: "Город"
+                                              },
+                                              domProps: {
+                                                value: contact.email
+                                              },
+                                              on: {
+                                                input: function($event) {
+                                                  if ($event.target.composing) {
+                                                    return
+                                                  }
+                                                  _vm.$set(
+                                                    contact,
+                                                    "email",
+                                                    $event.target.value
+                                                  )
+                                                }
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      ]),
                                       _vm._v(" "),
                                       _c("div", { staticClass: "col-md-1" }),
                                       _vm._v(" "),
@@ -39949,39 +40189,85 @@ var render = function() {
                   })
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group w-100 mt-3" },
-                  [
-                    _vm._m(4),
-                    _vm._v(" "),
-                    _c("editor", {
-                      attrs: {
-                        "api-key":
-                          "f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v",
-                        plugins:
-                          "advlist autolink link image lists charmap print preview",
-                        custom_colors: "true",
-                        dialog_type: "modal",
-                        selector: "textarea",
-                        toolbar:
-                          "forecolor backcolor | undo redo | styleselect | bold italic | link image | numlist bullist",
-                        init: {
-                          height: 600,
-                          color_map: ["1E1A1A", "c3a993", "Default"]
-                        }
-                      },
-                      model: {
-                        value: _vm.newContact.text,
-                        callback: function($$v) {
-                          _vm.$set(_vm.newContact, "text", $$v)
-                        },
-                        expression: "newContact.text"
+                _c("div", { staticClass: "form-group w-100 mt-3" }, [
+                  _c("label", { staticClass: "font-admin" }, [_vm._v("Адрес")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.newContact.address,
+                        expression: "newContact.address"
                       }
-                    })
-                  ],
-                  1
-                ),
+                    ],
+                    staticClass: "form-control font-admin",
+                    attrs: { type: "text", placeholder: "Город" },
+                    domProps: { value: _vm.newContact.address },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.newContact, "address", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group w-100 mt-3" }, [
+                  _c("label", { staticClass: "font-admin" }, [
+                    _vm._v("Телефон")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.newContact.phone,
+                        expression: "newContact.phone"
+                      }
+                    ],
+                    staticClass: "form-control font-admin",
+                    attrs: { type: "text", placeholder: "Город" },
+                    domProps: { value: _vm.newContact.phone },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.newContact, "phone", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group w-100 mt-3" }, [
+                  _c("label", { staticClass: "font-admin" }, [_vm._v("Почта")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.newContact.email,
+                        expression: "newContact.email"
+                      }
+                    ],
+                    staticClass: "form-control font-admin",
+                    attrs: { type: "text", placeholder: "Город" },
+                    domProps: { value: _vm.newContact.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.newContact, "email", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group w-100 mt-3" }, [
                   _vm.saveSuccess
@@ -40016,7 +40302,7 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(5)
+    _vm._m(4)
   ])
 }
 var staticRenderFns = [
@@ -40091,14 +40377,6 @@ var staticRenderFns = [
           )
         ]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "font-admin" }, [
-      _c("h6", [_vm._v("Текст")])
     ])
   },
   function() {
@@ -41592,82 +41870,84 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "footer-main" }, [
+    _c("footer", [
+      _c("div", { staticClass: "cont" }, [
+        _c("div", { staticClass: "row" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch"
+            },
+            [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("strong", [_vm._v("Контакты")]),
+                _c("br"),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "mailto:" + _vm.contact.email } }, [
+                  _vm._v(_vm._s(_vm.contact.email))
+                ]),
+                _c("br"),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "tel:" + _vm.contact.phone } }, [
+                  _vm._v(_vm._s(_vm.contact.phone))
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "main" }, [
-      _c("footer", [
-        _c("div", { staticClass: "cont" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-md-4 col-sm-6 col-xs-12 copyright" },
-              [
-                _c("img", {
-                  staticClass: "logo",
-                  attrs: { src: "images/logo-light.png", alt: "" }
-                }),
-                _vm._v(" "),
-                _c("p", { staticClass: "ml-3" }, [_vm._v("© 2019 SertExpert")])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-4 d-sm-none d-md-block" }, [
-              _c("div", { staticClass: "social" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "fab fa-facebook" })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", {
-                    staticClass: "fab fa-instagram",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", {
-                    staticClass: "fab fa-vk",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", {
-                    staticClass: "fab fa-google",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch"
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("strong", [_vm._v("Контакты")]),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "mailto:info@sertexpert.com" } }, [
-                    _vm._v("info@sertexpert.com")
-                  ]),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "tel:+78126678889" } }, [
-                    _vm._v("+7 812 667 88 89")
-                  ])
-                ])
-              ]
-            )
-          ])
+    return _c("div", { staticClass: "col-md-4 col-sm-6 col-xs-12 copyright" }, [
+      _c("img", {
+        staticClass: "logo",
+        attrs: { src: "images/logo-light.png", alt: "" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "ml-3" }, [_vm._v("© 2019 SertExpert")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-4 d-sm-none d-md-block" }, [
+      _c("div", { staticClass: "social" }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fab fa-facebook" })
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", {
+            staticClass: "fab fa-instagram",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", {
+            staticClass: "fab fa-vk",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", {
+            staticClass: "fab fa-google",
+            attrs: { "aria-hidden": "true" }
+          })
         ])
       ])
     ])
@@ -41727,12 +42007,6 @@ var render = function() {
               },
               [
                 _c("ul", [
-                  !_vm.isGeneral
-                    ? _c("li", { staticClass: "top-menu-li d-inline-flex" }, [
-                        _c("a", { attrs: { href: "/" } }, [_vm._v("Главная")])
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
                   _vm.isGeneral
                     ? _c("li", { staticClass: "top-menu-li d-inline-flex" }, [
                         _c(
@@ -41781,6 +42055,54 @@ var render = function() {
                       ])
                     : _vm._e(),
                   _vm._v(" "),
+                  !_vm.isGeneral
+                    ? _c("li", { staticClass: "top-menu-li d-inline-flex" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              id: "btn-services-not-general",
+                              scroll: ".scroll-services",
+                              href: "/"
+                            }
+                          },
+                          [_vm._v("Услуги")]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.isGeneral
+                    ? _c("li", { staticClass: "top-menu-li d-inline-flex" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              id: "btn-sertification-not-general",
+                              scroll: ".scroll-sertification",
+                              href: "/"
+                            }
+                          },
+                          [_vm._v("Сертификация по отраслям")]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  !_vm.isGeneral
+                    ? _c("li", { staticClass: "top-menu-li d-inline-flex" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              id: "btn-base-not-general",
+                              scroll: ".scroll-base",
+                              href: "/"
+                            }
+                          },
+                          [_vm._v("Нормативная база")]
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
                   _vm._m(1),
                   _vm._v(" "),
                   _vm._m(2),
@@ -41800,7 +42122,119 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(7)
+    _c("div", { staticClass: "full-menu" }, [
+      _c("div", { staticClass: "full-inner row" }, [
+        _c("nav", { staticClass: "col-md-8" }, [
+          _c("ul", [
+            _vm.isGeneral
+              ? _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        id: "btn-services-mobile",
+                        scroll: ".scroll-services",
+                        href: "#"
+                      }
+                    },
+                    [_vm._v("Услуги")]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.isGeneral
+              ? _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        id: "btn-sertification-mobile",
+                        scroll: ".scroll-sertification",
+                        href: "#"
+                      }
+                    },
+                    [_vm._v("Сертификация по отраслям")]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.isGeneral
+              ? _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        id: "btn-base-mobile",
+                        scroll: ".scroll-base",
+                        href: "#"
+                      }
+                    },
+                    [_vm._v("Нормативная база")]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.isGeneral
+              ? _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        id: "btn-services-mobile-not-general",
+                        scroll: ".scroll-services",
+                        href: "/"
+                      }
+                    },
+                    [_vm._v("Услуги")]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.isGeneral
+              ? _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        id: "btn-sertification-mobile-not-general",
+                        scroll: ".scroll-sertification",
+                        href: "/"
+                      }
+                    },
+                    [_vm._v("Сертификация по отраслям")]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.isGeneral
+              ? _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        id: "btn-base-mobile-not-general",
+                        scroll: ".scroll-base",
+                        href: "/"
+                      }
+                    },
+                    [_vm._v("Нормативная база")]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm._m(7),
+            _vm._v(" "),
+            _vm._m(8),
+            _vm._v(" "),
+            _vm._m(9),
+            _vm._v(" "),
+            _vm._m(10)
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(11)
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -41899,73 +42333,308 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "full-menu" }, [
-      _c("div", { staticClass: "full-inner row" }, [
-        _c("nav", { staticClass: "col-md-8" }, [
-          _c("ul", [
-            _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Главная")])]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "/news" } }, [_vm._v("Новости")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "/questions" } }, [_vm._v("Вопросы")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "/about" } }, [_vm._v("О компании")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "/contacts" } }, [_vm._v("Контакты")])
-            ])
-          ])
+    return _c("li", [
+      _c("a", { attrs: { href: "/news" } }, [_vm._v("Новости")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "/questions" } }, [_vm._v("Вопросы")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "/about" } }, [_vm._v("О компании")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "/contacts" } }, [_vm._v("Контакты")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-4 full-contact" }, [
+      _c("ul", [
+        _c("li", { staticClass: "title" }, [_vm._v("Контакты")]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", [_vm._v("info@sertlab.com")]),
+          _c("br"),
+          _vm._v(" "),
+          _c("a", [_vm._v("+7 499 348 16 88")])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-4 full-contact" }, [
-          _c("ul", [
-            _c("li", { staticClass: "title" }, [_vm._v("Контакты")]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", [_vm._v("info@sertlab.com")]),
-              _c("br"),
-              _vm._v(" "),
-              _c("a", [_vm._v("+7 499 348 16 88")])
+        _c("li", [
+          _c("div", { staticClass: "social" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-facebook" })
             ]),
             _vm._v(" "),
-            _c("li", [
-              _c("div", { staticClass: "social" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "fab fa-facebook" })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", {
-                    staticClass: "fab fa-instagram",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", {
-                    staticClass: "fab fa-vk",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", {
-                    staticClass: "fab fa-google",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ])
-              ])
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", {
+                staticClass: "fab fa-instagram",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", {
+                staticClass: "fab fa-vk",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", {
+                staticClass: "fab fa-google",
+                attrs: { "aria-hidden": "true" }
+              })
             ])
           ])
         ])
       ])
     ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=template&id=02648e34&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=template&id=02648e34& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    { staticClass: "background bg-deep-sert sert2 questions-2 container" },
+    [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row position-relative" }, [
+          _c("div", { staticClass: "col-md-4 ml-auto col-sm-6 bottom-margin" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-md-4 ml-auto col-sm-6 bottom-margin text-center mb-3"
+            },
+            [
+              _vm._m(0),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "transition",
+                { attrs: { name: "out-left-notif", mode: "out-in" } },
+                [
+                  !_vm.successSend
+                    ? _c("div", { key: "adasdaaaa" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.contacts.name,
+                              expression: "contacts.name"
+                            }
+                          ],
+                          staticClass: "txt2-2",
+                          attrs: {
+                            id: "name",
+                            name: "name",
+                            placeholder: "Имя",
+                            type: "name",
+                            value: "",
+                            required: ""
+                          },
+                          domProps: { value: _vm.contacts.name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.contacts,
+                                "name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.contacts.number,
+                              expression: "contacts.number"
+                            }
+                          ],
+                          staticClass: "txt2-2",
+                          attrs: {
+                            id: "phone",
+                            name: "phone",
+                            placeholder: "Номер телефона",
+                            type: "phone",
+                            value: "",
+                            required: ""
+                          },
+                          domProps: { value: _vm.contacts.number },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.contacts,
+                                "number",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.contacts.message,
+                              expression: "contacts.message"
+                            }
+                          ],
+                          staticClass: "txt2-2",
+                          attrs: {
+                            id: "message",
+                            placeholder: "Вопрос...",
+                            required: ""
+                          },
+                          domProps: { value: _vm.contacts.message },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.contacts,
+                                "message",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "forma2button-2 btn",
+                            attrs: {
+                              disabled:
+                                _vm.contacts.name !== "" ||
+                                _vm.contacts.number !== "" ||
+                                _vm.contacts.message !== ""
+                                  ? _vm.disabled
+                                  : ""
+                            },
+                            on: { click: _vm.sendSlackNotification }
+                          },
+                          [
+                            _vm._v(
+                              "\n                            Узнать сейчас\n                        "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("h6", { staticClass: "text-black" }, [
+                          _vm._v(
+                            "Данные конфиденциальны\n                            и не передаются третьим лицам\n                        "
+                          )
+                        ])
+                      ])
+                    : _c(
+                        "div",
+                        {
+                          key: "adasdaa",
+                          staticClass: "alert alert-light-2",
+                          staticStyle: { "margin-top": "20px" },
+                          attrs: { role: "alert" }
+                        },
+                        [
+                          _c(
+                            "h3",
+                            { staticClass: "notify-success-text-alert" },
+                            [
+                              _vm._v(
+                                "Спасибо,\n                            ваша заявка принята!"
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "h4",
+                            { staticClass: "notify-success-text-alert" },
+                            [_vm._v("Мы свяжемся с вами в ближайшее время.")]
+                          )
+                        ]
+                      )
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", {
+            staticClass:
+              "col-md-4 ml-auto col-sm-6 text-center counter-section wow fadeInUp sm-margin-bottom-ten"
+          })
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "counter-title white-text questions-section-title" },
+      [
+        _c("h5", { staticClass: "text-black" }, [_vm._v("ВОЗНИКЛИ ВОПРОСЫ?")]),
+        _vm._v(" "),
+        _c("h6", { staticClass: "text-black" }, [
+          _vm._v("ЗАДАЙТЕ ЕГО НАШИМ СПЕЦИАЛИСТАМ.")
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -41992,6 +42661,8 @@ var render = function() {
   return _c("section", { staticClass: "background bg-deep-sert sert2" }, [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row position-relative" }, [
+        _c("div", { staticClass: "col-md-4 ml-auto col-sm-6 bottom-margin" }),
+        _vm._v(" "),
         _vm._m(0),
         _vm._v(" "),
         _c(
@@ -42020,7 +42691,7 @@ var render = function() {
                         attrs: {
                           id: "name",
                           name: "name",
-                          placeholder: "Имя:",
+                          placeholder: "Имя",
                           type: "name",
                           value: "",
                           required: ""
@@ -42049,7 +42720,7 @@ var render = function() {
                         attrs: {
                           id: "phone",
                           name: "phone",
-                          placeholder: "Номер телефона:",
+                          placeholder: "Номер телефона",
                           type: "phone",
                           value: "",
                           required: ""
@@ -42069,36 +42740,6 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
-                      _c("textarea", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.contacts.message,
-                            expression: "contacts.message"
-                          }
-                        ],
-                        staticClass: "txt2",
-                        attrs: {
-                          id: "message",
-                          placeholder: "Вопрос...",
-                          required: ""
-                        },
-                        domProps: { value: _vm.contacts.message },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.contacts,
-                              "message",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
                       _c(
                         "button",
                         {
@@ -42106,8 +42747,7 @@ var render = function() {
                           attrs: {
                             disabled:
                               _vm.contacts.name !== "" ||
-                              _vm.contacts.number !== "" ||
-                              _vm.contacts.message !== ""
+                              _vm.contacts.number !== ""
                                 ? _vm.disabled
                                 : ""
                           },
@@ -42118,7 +42758,15 @@ var render = function() {
                             "\n                            Узнать сейчас\n                        "
                           )
                         ]
-                      )
+                      ),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("h6", { staticClass: "text-white" }, [
+                        _vm._v(
+                          "Данные конфиденциальны\n                            и не передаются третьим лицам\n                        "
+                        )
+                      ])
                     ])
                   : _c(
                       "div",
@@ -42156,17 +42804,20 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "col-md-8 ml-auto col-sm-6 bottom-margin text-right" },
+      {
+        staticClass: "col-md-4 ml-auto col-sm-6 bottom-margin text-center mb-3"
+      },
       [
         _c(
           "span",
           { staticClass: "counter-title white-text questions-section-title" },
           [
-            _vm._v("Возниклы вопросы?"),
-            _c("br"),
-            _vm._v("\n                        Задайте его нашим специалистам.")
+            _vm._v(
+              " Не знаете какой документ нужен именно\n                вам?"
+            )
           ]
-        )
+        ),
+        _c("br")
       ]
     )
   }
@@ -42202,7 +42853,7 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _c("questions-section-component"),
+      _c("questions-section-2-component"),
       _vm._v(" "),
       _c("footer-component")
     ],
@@ -42314,29 +42965,38 @@ var render = function() {
           _c("section", { staticClass: "news-article top_90" }, [
             _c("article", [
               _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-1" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-10" }, [
-                  _vm.article[0].img
-                    ? _c("figure", { staticClass: "article-image bottom_30" }, [
-                        _c("img", {
-                          attrs: { src: _vm.url + _vm.article[0].img, alt: "" }
-                        })
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
+                _c("div", { staticClass: "col-md-12" }, [
                   _c("h1", { staticClass: "title text-center" }, [
                     _vm._v(_vm._s(_vm.article[0].title))
                   ]),
                   _vm._v(" "),
-                  _c("div", {
-                    staticClass: "text-article top_30",
-                    staticStyle: { "font-size": "15px" },
-                    domProps: { innerHTML: _vm._s(_vm.article[0].text) }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-1" })
+                  _c("div", { staticClass: "row" }, [
+                    _vm.article[0].img
+                      ? _c("div", { staticClass: "col-md-4" }, [
+                          _c(
+                            "figure",
+                            { staticClass: "article-image bottom_30" },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  src: _vm.url + _vm.article[0].img,
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-8" }, [
+                      _c("div", {
+                        staticClass: "text-article left_30",
+                        staticStyle: { "font-size": "15px" },
+                        domProps: { innerHTML: _vm._s(_vm.article[0].text) }
+                      })
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
@@ -42388,32 +43048,54 @@ var render = function() {
         _c("div", { staticClass: "cont" }, [
           _c("section", { staticClass: "our-news" }, [
             _c("div", { staticClass: "row" }, [
-              _c(
-                "div",
-                { staticClass: "col-md-12 news-list bottom_60" },
-                _vm._l(_vm.contacts, function(contact) {
-                  return _c("article", { staticClass: "news-box row" }, [
-                    _c("figure", {
-                      staticClass: "col-md-5",
-                      domProps: { innerHTML: _vm._s(contact.map) }
-                    }),
+              _c("div", { staticClass: "col-md-12 news-list bottom_60" }, [
+                _c("article", { staticClass: "news-box row" }, [
+                  _c("figure", {
+                    staticClass: "col-md-5",
+                    domProps: { innerHTML: _vm._s(_vm.contacts.map) }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-7" }, [
+                    _c("h6", [_vm._v("Город: " + _vm._s(_vm.contacts.city))]),
                     _vm._v(" "),
-                    _c("div", {
-                      staticClass: "col-md-7",
-                      domProps: { innerHTML: _vm._s(contact.text) }
-                    }),
+                    _c("h6", [
+                      _vm._v("Адрес: " + _vm._s(_vm.contacts.address))
+                    ]),
                     _vm._v(" "),
-                    _c("hr", { staticClass: "col-md-12 bottom_30 top_30" })
-                  ])
-                }),
-                0
-              )
+                    _c("h6", [
+                      _vm._v("Почта: "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "contacts-info",
+                          attrs: { href: "tel:" + _vm.contacts.phone }
+                        },
+                        [_vm._v(_vm._s(_vm.contacts.phone))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("h6", [
+                      _vm._v("Телефон: "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "contacts-info",
+                          attrs: { href: "mailto:" + _vm.contacts.email }
+                        },
+                        [_vm._v(_vm._s(_vm.contacts.email))]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "col-md-12 bottom_30 top_30" })
+                ])
+              ])
             ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("questions-section-component"),
+      _c("questions-section-2-component"),
       _vm._v(" "),
       _c("footer-component")
     ],
@@ -42584,7 +43266,7 @@ var render = function() {
                             "div",
                             {
                               staticClass:
-                                "col-xs-6 col-sm-3 col-md-2 card_wrap industry-general mb-5"
+                                "col-xs-6 col-sm-3 col-md-2 col-6 card_wrap industry-general mb-5"
                             },
                             [
                               _c(
@@ -42794,28 +43476,40 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("section", { staticClass: "home" }, [
       _c("div", { staticClass: "home-content" }, [
-        _c("h1", { staticClass: "hero-title banner-animation-start-page" }, [
-          _vm._v("Быстро."),
-          _c("br"),
-          _c("span", [_vm._v("Качественно. Надежно.")])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "top_45 banner-animation-start-page" }, [
-          _vm._v("Компания SERTEXPERT оказывает услуги по оформлению"),
-          _c("br"),
-          _vm._v(
-            "\n                    пакетов\n                    разрешительной документации.\n                    "
-          ),
-          _c("span", {
-            staticClass: "element",
-            attrs: {
-              "data-text1": "Сертификация и декларирование.",
-              "data-text2": "Гигиенические документы.",
-              "data-text3": "Пожарная безопасность.",
-              "data-loop": "true",
-              "data-backdelay": "1500"
-            }
-          })
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 col-9" }, [
+            _c(
+              "h1",
+              { staticClass: "hero-title banner-animation-start-page" },
+              [
+                _vm._v("Быстро."),
+                _c("br"),
+                _c("span", [_vm._v("Качественно. Надежно.")])
+              ]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "top_45 banner-animation-start-page" }, [
+              _vm._v("Компания SERTEXPERT оказывает услуги"),
+              _c("br"),
+              _vm._v(
+                " по оформлению\n                            пакетов\n                            разрешительной документации."
+              ),
+              _c("br"),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "element",
+                attrs: {
+                  "data-text1": "Сертификация и декларирование.",
+                  "data-text2": "Гигиенические документы.",
+                  "data-text3": "Пожарная безопасность.",
+                  "data-loop": "true",
+                  "data-backdelay": "1500"
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 col-3" })
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "social animate-right" }, [
@@ -55409,6 +56103,7 @@ Vue.component('search-component', __webpack_require__(/*! ./components/pages/Sea
 Vue.component('header-component', __webpack_require__(/*! ./components/layouts/HeaderComponent */ "./resources/js/components/layouts/HeaderComponent.vue")["default"]);
 Vue.component('footer-component', __webpack_require__(/*! ./components/layouts/FooterComponent */ "./resources/js/components/layouts/FooterComponent.vue")["default"]);
 Vue.component('questions-section-component', __webpack_require__(/*! ./components/layouts/QuestionsSectionComponent */ "./resources/js/components/layouts/QuestionsSectionComponent.vue")["default"]);
+Vue.component('questions-section-2-component', __webpack_require__(/*! ./components/layouts/QuestionsSection2Component.vue */ "./resources/js/components/layouts/QuestionsSection2Component.vue")["default"]);
 /**
  * Admin
  */
@@ -56114,6 +56809,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderComponent_vue_vue_type_template_id_6832e7cf___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderComponent_vue_vue_type_template_id_6832e7cf___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/layouts/QuestionsSection2Component.vue":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/layouts/QuestionsSection2Component.vue ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _QuestionsSection2Component_vue_vue_type_template_id_02648e34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./QuestionsSection2Component.vue?vue&type=template&id=02648e34& */ "./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=template&id=02648e34&");
+/* harmony import */ var _QuestionsSection2Component_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuestionsSection2Component.vue?vue&type=script&lang=js& */ "./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _QuestionsSection2Component_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _QuestionsSection2Component_vue_vue_type_template_id_02648e34___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _QuestionsSection2Component_vue_vue_type_template_id_02648e34___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/layouts/QuestionsSection2Component.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionsSection2Component_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionsSection2Component.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionsSection2Component_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=template&id=02648e34&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=template&id=02648e34& ***!
+  \*******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionsSection2Component_vue_vue_type_template_id_02648e34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionsSection2Component.vue?vue&type=template&id=02648e34& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layouts/QuestionsSection2Component.vue?vue&type=template&id=02648e34&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionsSection2Component_vue_vue_type_template_id_02648e34___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionsSection2Component_vue_vue_type_template_id_02648e34___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

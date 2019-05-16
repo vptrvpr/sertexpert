@@ -70,17 +70,21 @@
                                                                            class="form-control font-admin"
                                                                               placeholder="Яндекс Карта" rows="4"></textarea>
                                                                 </div>
-                                                                <editor v-model="contact.text"
-                                                                        api-key="f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v"
-                                                                        plugins="advlist autolink link image lists charmap print preview"
-                                                                        custom_colors="true"
-                                                                        dialog_type="modal"
-                                                                        selector="textarea"
-                                                                        toolbar="forecolor backcolor | undo redo | styleselect | bold italic | link image | numlist bullist"
-                                                                        :init="{height: 600,color_map: [
-                                                    '1E1A1A','c3a993', 'Default',
-                                                    ]}"
-                                                                ></editor>
+                                                                <div class="form-group w-100 mt-3">
+                                                                    <label class="font-admin">Адрес</label>
+                                                                    <input type="text" v-model="contact.address" class="form-control font-admin"
+                                                                           placeholder="Город">
+                                                                </div>
+                                                                <div class="form-group w-100 mt-3">
+                                                                    <label class="font-admin">Телефон</label>
+                                                                    <input type="text" v-model="contact.phone" class="form-control font-admin"
+                                                                           placeholder="Город">
+                                                                </div>
+                                                                <div class="form-group w-100 mt-3">
+                                                                    <label class="font-admin">Почта</label>
+                                                                    <input type="text" v-model="contact.email" class="form-control font-admin"
+                                                                           placeholder="Город">
+                                                                </div>
                                                             </div>
                                                             <div class="col-md-1"></div>
                                                             <div class="col-md-12 mt-3">
@@ -118,28 +122,30 @@
                             <h4 class="card-title">Новый контакт</h4>
                             <div class="row">
                                 <div class="form-group w-100 mt-3">
-                                    <label class="font-admin">Город (для Админ-панели)</label>
-                                    <input type="text" v-model="newContact.city" class="form-control font-admin"
-                                           placeholder="Город">
-                                </div>
+                                <label class="font-admin">Город (для Админ-панели)</label>
+                                <input type="text" v-model="newContact.city" class="form-control font-admin"
+                                       placeholder="Город">
+                            </div>
                                 <div class="form-group w-100 mt-3">
                                     <label class="font-admin">Яндекс Карта</label>
-                                    <textarea rows="4" type="text" v-model="newContact.map" class="form-control font-admin"
+                                    <textarea rows="4" type="text" v-model="newContact.map"
+                                              class="form-control font-admin"
                                               placeholder="Яндекс Карта"></textarea>
                                 </div>
                                 <div class="form-group w-100 mt-3">
-                                    <label class="font-admin"><h6>Текст</h6></label>
-                                    <editor v-model="newContact.text"
-                                            api-key="f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v"
-                                            plugins="advlist autolink link image lists charmap print preview"
-                                            custom_colors="true"
-                                            dialog_type="modal"
-                                            selector="textarea"
-                                            toolbar="forecolor backcolor | undo redo | styleselect | bold italic | link image | numlist bullist"
-                                            :init="{height: 600,color_map: [
-                                                    '1E1A1A','c3a993','Default'
-                                                    ]}"
-                                    ></editor>
+                                    <label class="font-admin">Адрес</label>
+                                    <input type="text" v-model="newContact.address" class="form-control font-admin"
+                                           placeholder="Город">
+                                </div>
+                                <div class="form-group w-100 mt-3">
+                                    <label class="font-admin">Телефон</label>
+                                    <input type="text" v-model="newContact.phone" class="form-control font-admin"
+                                           placeholder="Город">
+                                </div>
+                                <div class="form-group w-100 mt-3">
+                                    <label class="font-admin">Почта</label>
+                                    <input type="text" v-model="newContact.email" class="form-control font-admin"
+                                           placeholder="Город">
                                 </div>
                                 <div class="form-group w-100 mt-3">
                                     <div v-if="saveSuccess" class="alert alert-success" role="alert">
@@ -181,7 +187,10 @@
                 newContact: {
                     city: '',
                     map: '',
-                    text: ''
+                    address: '',
+                    phone: '',
+                    email: ''
+
                 }
             }
         },
@@ -247,7 +256,9 @@
                     this.newContact = {
                         city: '',
                         map: '',
-                        text: ''
+                        address: '',
+                        phone: '',
+                        email: ''
                     };
                     this.getContact();
 

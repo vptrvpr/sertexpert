@@ -8,6 +8,7 @@ use App\Contact;
 use App\Info\Info;
 use App\Question;
 use Illuminate\Http\Request;
+use mysql_xdevapi\Session;
 
 class PageController extends Controller
 {
@@ -18,6 +19,20 @@ class PageController extends Controller
      */
     public function index()
     {
+        $request = file_get_contents("http://api.sypexgeo.net/json/".$_SERVER['REMOTE_ADDR']);
+        $geo = json_decode($request);
+
+        if(!$geo->city){
+            $city = 'Санкт-Петербург';
+        }else{
+            $city = $geo->city->name_ru;
+        }
+
+        setcookie("city", $city);
+
+
+
+
         $info = new Info();
         $info = $info->getInfoIndex();
 
@@ -58,7 +73,11 @@ class PageController extends Controller
      */
     public function contacts()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::where('city',$_COOKIE['city'])->first();
+
+        if(!$contacts){
+            $contacts = Contact::where('city','Санкт-Петербург')->first();
+        }
 
 
         return view( 'pages.contacts',compact('contacts') );

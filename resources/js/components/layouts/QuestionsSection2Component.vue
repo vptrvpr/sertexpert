@@ -16,7 +16,7 @@
                                    type="name"
                                    value="" required>
                             <input id="phone" class="txt2-2" v-model="contacts.number" name="phone"
-                                   placeholder="Номер телефона" type="phone" value="" required>
+                                   placeholder="Телефон или email" type="phone" value="" required>
                             <textarea id="message" v-model="contacts.message" class="txt2-2" placeholder="Вопрос..."
                                       required></textarea>
                             <button class="forma2button-2 btn" @click="sendSlackNotification"

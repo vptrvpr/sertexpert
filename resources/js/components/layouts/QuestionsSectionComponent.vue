@@ -20,7 +20,7 @@
                                    type="name"
                                    value="" required>
                             <input id="phone" class="txt2" v-model="contacts.number" name="phone"
-                                   placeholder="Номер телефона" type="phone" value="" required>
+                                   placeholder="Телефон или email" type="phone" value="" required>
                             <button class="forma2button btn" @click="sendSlackNotification"
                                     :disabled="contacts.name !== '' || contacts.number !== '' ? disabled : ''">
                                 Узнать сейчас

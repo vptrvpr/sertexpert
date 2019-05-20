@@ -3303,7 +3303,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['url'],
   data: function data() {
     return {
       contact: ''
@@ -41874,9 +41878,21 @@ var render = function() {
     _c("footer", [
       _c("div", { staticClass: "cont" }, [
         _c("div", { staticClass: "row" }, [
-          _vm._m(0),
+          _c("div", { staticClass: "col-md-4 col-sm-6 col-xs-12 copyright" }, [
+            _vm.url
+              ? _c("img", {
+                  staticClass: "logo",
+                  attrs: { src: _vm.url + "images/logo-light.png", alt: "" }
+                })
+              : _c("img", {
+                  staticClass: "logo",
+                  attrs: { src: "images/logo-light.png", alt: "" }
+                }),
+            _vm._v(" "),
+            _c("p", { staticClass: "ml-3" }, [_vm._v("© 2019 SertExpert")])
+          ]),
           _vm._v(" "),
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "div",
@@ -41906,19 +41922,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4 col-sm-6 col-xs-12 copyright" }, [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "images/logo-light.png", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "ml-3" }, [_vm._v("© 2019 SertExpert")])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -42499,7 +42502,7 @@ var render = function() {
                           attrs: {
                             id: "phone",
                             name: "phone",
-                            placeholder: "Номер телефона",
+                            placeholder: "Телефон или email",
                             type: "phone",
                             value: "",
                             required: ""
@@ -42720,7 +42723,7 @@ var render = function() {
                         attrs: {
                           id: "phone",
                           name: "phone",
-                          placeholder: "Номер телефона",
+                          placeholder: "Телефон или email",
                           type: "phone",
                           value: "",
                           required: ""
@@ -43005,7 +43008,7 @@ var render = function() {
       _vm._v(" "),
       _c("questions-section-component"),
       _vm._v(" "),
-      _c("footer-component")
+      _c("footer-component", { attrs: { url: _vm.url } })
     ],
     1
   )
@@ -43051,41 +43054,49 @@ var render = function() {
               _c("div", { staticClass: "col-md-12 news-list bottom_60" }, [
                 _c("article", { staticClass: "news-box row" }, [
                   _c("figure", {
-                    staticClass: "col-md-5",
+                    staticClass:
+                      "col-xl-5 col-lg-7 col-md-7 col-sm-12 col-xs-12",
                     domProps: { innerHTML: _vm._s(_vm.contacts.map) }
                   }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-7" }, [
-                    _c("h6", [_vm._v("Город: " + _vm._s(_vm.contacts.city))]),
-                    _vm._v(" "),
-                    _c("h6", [
-                      _vm._v("Адрес: " + _vm._s(_vm.contacts.address))
-                    ]),
-                    _vm._v(" "),
-                    _c("h6", [
-                      _vm._v("Почта: "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "contacts-info",
-                          attrs: { href: "tel:" + _vm.contacts.phone }
-                        },
-                        [_vm._v(_vm._s(_vm.contacts.phone))]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("h6", [
-                      _vm._v("Телефон: "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "contacts-info",
-                          attrs: { href: "mailto:" + _vm.contacts.email }
-                        },
-                        [_vm._v(_vm._s(_vm.contacts.email))]
-                      )
-                    ])
-                  ]),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-xl-7 col-lg-5 col-md-5 col-sm-12 col-xs-12"
+                    },
+                    [
+                      _c("h6", [_vm._v("Город: " + _vm._s(_vm.contacts.city))]),
+                      _vm._v(" "),
+                      _c("h6", [
+                        _vm._v("Адрес: " + _vm._s(_vm.contacts.address))
+                      ]),
+                      _vm._v(" "),
+                      _c("h6", [
+                        _vm._v("Почта: "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "contacts-info",
+                            attrs: { href: "tel:" + _vm.contacts.phone }
+                          },
+                          [_vm._v(_vm._s(_vm.contacts.phone))]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h6", [
+                        _vm._v("Телефон: "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "contacts-info",
+                            attrs: { href: "mailto:" + _vm.contacts.email }
+                          },
+                          [_vm._v(_vm._s(_vm.contacts.email))]
+                        )
+                      ])
+                    ]
+                  ),
                   _vm._v(" "),
                   _c("hr", { staticClass: "col-md-12 bottom_30 top_30" })
                 ])

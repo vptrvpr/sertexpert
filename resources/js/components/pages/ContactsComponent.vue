@@ -14,10 +14,10 @@
                         <!-- a news -->
                         <div class="col-md-12 news-list bottom_60">
                             <article class="news-box row">
-                                <figure class="col-md-5" v-html="contacts.map">
+                                <figure class="col-xl-5 col-lg-7 col-md-7 col-sm-12 col-xs-12"  v-html="contacts.map">
 
                                 </figure>
-                                <div class="col-md-7">
+                                <div class="col-xl-7 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                     <h6>Город: {{contacts.city}}</h6>
                                     <h6>Адрес: {{contacts.address}}</h6>
                                     <h6>Почта: <a class="contacts-info" :href="'tel:'+contacts.phone">{{contacts.phone}}</a></h6>

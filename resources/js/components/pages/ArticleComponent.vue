@@ -33,7 +33,7 @@
             </div> <!-- cont end -->
         </div> <!-- wrapper end -->
         <questions-section-component></questions-section-component>
-        <footer-component></footer-component>
+        <footer-component :url="url"></footer-component>
 
     </div>
 </template>

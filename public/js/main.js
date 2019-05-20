@@ -331,7 +331,7 @@ $( document ).ready( function () {
      * Mobile
      */
 
-    $('#btn-services-modile-not-general').click( function(){
+    $('#btn-services-mobile-not-general').click( function(){
         $.cookie('btn-services-not-general',1);
     });
 
@@ -443,8 +443,11 @@ $( document ).ready( function () {
 
 
     if ( $.cookie('btn-services-not-general') === '1' ) {
+        if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+            $( 'body' ).toggleClass( 'full-open' );
+        }
 
-        var scroll_el = $('.scroll-base'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        var scroll_el = $('.scroll-services'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
             $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 1000); // анимируем скроолинг к элементу scroll_el
         }
@@ -455,8 +458,11 @@ $( document ).ready( function () {
     }
 
     if ( $.cookie('btn-sertification-not-general') === '1' ) {
+        if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+            $( 'body' ).toggleClass( 'full-open' );
+        }
 
-        var scroll_el = $('.scroll-base'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        var scroll_el = $('.scroll-sertification'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
             $('html, body').animate({ scrollTop: $(scroll_el).offset().top-250 }, 1000); // анимируем скроолинг к элементу scroll_el
         }
@@ -467,6 +473,9 @@ $( document ).ready( function () {
     }
 
     if ( $.cookie('btn-base-not-general') === '1' ) {
+        if ( $( 'body' ).attr( 'class' ) === 'full-open' ) {
+            $( 'body' ).toggleClass( 'full-open' );
+        }
 
         var scroll_el = $('.scroll-base'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки

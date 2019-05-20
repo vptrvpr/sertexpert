@@ -4,7 +4,10 @@
             <div class="cont">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12 copyright">
-                        <img class="logo"
+                        <img v-if="url" class="logo"
+                             :src="url+'images/logo-light.png'"
+                             alt="">
+                        <img v-else class="logo"
                              src="images/logo-light.png"
                              alt="">
                         <p class="ml-3">© 2019 SertExpert</p>
@@ -32,6 +35,7 @@
 
 <script>
     export default {
+        props: ['url'],
         data: function() {
             return{
                 contact: ''

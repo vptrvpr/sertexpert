@@ -24,10 +24,13 @@
                     <div class="social animate-right">
                         <a class="text">социальные сети</a>
                         <div class="line"></div>
-                        <a href="#"><i class="fab fa-facebook"></i> </a>
-                        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i> </a>
+                        <a href="https://www.facebook.com/sertexpert" target="_blank"><i
+                            class="fab fa-facebook"></i> </a>
+                        <a href="https://www.instagram.com/sertexpert/" target="_blank"><i
+                            class="fab fa-instagram" aria-hidden="true"></i> </a>
                         <a href="https://vk.com/sertexpert" target="_blank"><i class="fab fa-vk" aria-hidden="true"></i> </a>
-                        <a href="#"><i class="fab fa-google" aria-hidden="true"></i> </a>
+                        <a href="https://www.youtube.com/channel/UCRPY3ZSj3bKYaI3rcolOG-Q?guided_help_flow=3"
+                           target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i> </a>
                     </div>
                 </div>
             </section>

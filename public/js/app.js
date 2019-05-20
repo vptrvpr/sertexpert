@@ -3307,6 +3307,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['url'],
   data: function data() {
@@ -3342,6 +3345,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -3821,6 +3827,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -41932,16 +41941,32 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4 d-sm-none d-md-block" }, [
       _c("div", { staticClass: "social" }, [
-        _c("a", { attrs: { href: "#" } }, [
-          _c("i", { staticClass: "fab fa-facebook" })
-        ]),
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "https://www.facebook.com/sertexpert",
+              target: "_blank"
+            }
+          },
+          [_c("i", { staticClass: "fab fa-facebook" })]
+        ),
         _vm._v(" "),
-        _c("a", { attrs: { href: "#" } }, [
-          _c("i", {
-            staticClass: "fab fa-instagram",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]),
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "https://www.instagram.com/sertexpert/",
+              target: "_blank"
+            }
+          },
+          [
+            _c("i", {
+              staticClass: "fab fa-instagram",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
+        ),
         _vm._v(" "),
         _c(
           "a",
@@ -41954,12 +41979,22 @@ var staticRenderFns = [
           ]
         ),
         _vm._v(" "),
-        _c("a", { attrs: { href: "#" } }, [
-          _c("i", {
-            staticClass: "fab fa-google",
-            attrs: { "aria-hidden": "true" }
-          })
-        ])
+        _c(
+          "a",
+          {
+            attrs: {
+              href:
+                "https://www.youtube.com/channel/UCRPY3ZSj3bKYaI3rcolOG-Q?guided_help_flow=3",
+              target: "_blank"
+            }
+          },
+          [
+            _c("i", {
+              staticClass: "fab fa-youtube",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
+        )
       ])
     ])
   }
@@ -42389,16 +42424,32 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("li", [
           _c("div", { staticClass: "social" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fab fa-facebook" })
-            ]),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://www.facebook.com/sertexpert",
+                  target: "_blank"
+                }
+              },
+              [_c("i", { staticClass: "fab fa-facebook" })]
+            ),
             _vm._v(" "),
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", {
-                staticClass: "fab fa-instagram",
-                attrs: { "aria-hidden": "true" }
-              })
-            ]),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "https://www.instagram.com/sertexpert/",
+                  target: "_blank"
+                }
+              },
+              [
+                _c("i", {
+                  staticClass: "fab fa-instagram",
+                  attrs: { "aria-hidden": "true" }
+                })
+              ]
+            ),
             _vm._v(" "),
             _c(
               "a",
@@ -42413,12 +42464,22 @@ var staticRenderFns = [
               ]
             ),
             _vm._v(" "),
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", {
-                staticClass: "fab fa-google",
-                attrs: { "aria-hidden": "true" }
-              })
-            ])
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "https://www.youtube.com/channel/UCRPY3ZSj3bKYaI3rcolOG-Q?guided_help_flow=3",
+                  target: "_blank"
+                }
+              },
+              [
+                _c("i", {
+                  staticClass: "fab fa-youtube",
+                  attrs: { "aria-hidden": "true" }
+                })
+              ]
+            )
           ])
         ])
       ])
@@ -43553,16 +43614,32 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "line" }),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fab fa-facebook" })
-          ]),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "https://www.facebook.com/sertexpert",
+                target: "_blank"
+              }
+            },
+            [_c("i", { staticClass: "fab fa-facebook" })]
+          ),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", {
-              staticClass: "fab fa-instagram",
-              attrs: { "aria-hidden": "true" }
-            })
-          ]),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "https://www.instagram.com/sertexpert/",
+                target: "_blank"
+              }
+            },
+            [
+              _c("i", {
+                staticClass: "fab fa-instagram",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
+          ),
           _vm._v(" "),
           _c(
             "a",
@@ -43575,12 +43652,22 @@ var staticRenderFns = [
             ]
           ),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", {
-              staticClass: "fab fa-google",
-              attrs: { "aria-hidden": "true" }
-            })
-          ])
+          _c(
+            "a",
+            {
+              attrs: {
+                href:
+                  "https://www.youtube.com/channel/UCRPY3ZSj3bKYaI3rcolOG-Q?guided_help_flow=3",
+                target: "_blank"
+              }
+            },
+            [
+              _c("i", {
+                staticClass: "fab fa-youtube",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
+          )
         ])
       ])
     ])

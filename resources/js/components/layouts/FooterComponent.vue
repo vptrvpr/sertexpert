@@ -14,11 +14,14 @@
                     </div>
                     <div class="col-md-4 d-sm-none d-md-block">
                         <div class="social">
-                            <a href="#"><i class="fab fa-facebook"></i> </a>
-                            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i> </a>
+                            <a href="https://www.facebook.com/sertexpert" target="_blank"><i
+                                class="fab fa-facebook"></i> </a>
+                            <a href="https://www.instagram.com/sertexpert/" target="_blank"><i
+                                class="fab fa-instagram" aria-hidden="true"></i> </a>
                             <a href="https://vk.com/sertexpert" target="_blank"><i class="fab fa-vk"
                                                                                    aria-hidden="true"></i> </a>
-                            <a href="#"><i class="fab fa-google" aria-hidden="true"></i> </a>
+                            <a href="https://www.youtube.com/channel/UCRPY3ZSj3bKYaI3rcolOG-Q?guided_help_flow=3"
+                               target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i> </a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">

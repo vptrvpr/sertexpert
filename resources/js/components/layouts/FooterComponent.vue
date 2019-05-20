@@ -16,7 +16,8 @@
                         <div class="social">
                             <a href="#"><i class="fab fa-facebook"></i> </a>
                             <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i> </a>
-                            <a href="#"><i class="fab fa-vk" aria-hidden="true"></i> </a>
+                            <a href="https://vk.com/sertexpert" target="_blank"><i class="fab fa-vk"
+                                                                                   aria-hidden="true"></i> </a>
                             <a href="#"><i class="fab fa-google" aria-hidden="true"></i> </a>
                         </div>
                     </div>

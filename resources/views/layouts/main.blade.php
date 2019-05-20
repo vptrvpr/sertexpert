@@ -45,7 +45,7 @@
 <script src="{{env('APP_URL')}}js/app-particels.js"></script>
 <script src="{{env('APP_URL')}}js/jquery.hover3d.js"></script>
 <script src="{{env('APP_URL')}}js/coockie.js"></script>
-<script src="{{env('APP_URL')}}js/main.js?1222"></script>
+<script src="{{env('APP_URL')}}js/main.js?12222"></script>
 <script src="{{env('APP_URL')}}js/animatedModal.js"></script>
 
 </body>

@@ -41,7 +41,8 @@
                                 <div class="col-md-12">
                                     <div class="row ">
                                         <div class="title-widget col-12 animate-first">
-                                            <h3 class="text-center title-services mb-4 scroll-services" >Услуги</h3>
+                                            <h3 class="text-center title-services mb-4 scroll-services"
+                                                id="scroll-services">Услуги</h3>
                                         </div>
                                         <div class="col-cxs-12 col-sm-6 col-md-4 card_wrap pb-2 pr-2"
                                              v-for="category in data[0].category">
@@ -78,7 +79,8 @@
                             <div class="branches ">
                                 <div class="row">
                                     <div class="title-widget col-12">
-                                        <h3 class="text-center title-services mb-5 animate-second scroll-sertification">Сертификация по
+                                        <h3 class="text-center title-services mb-5 animate-second scroll-sertification"
+                                            id="scroll-sertification">Сертификация по
                                             отраслям</h3>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-md-2 col-6 card_wrap industry-general mb-5" v-for="category in data[1].category">
@@ -112,7 +114,8 @@
                                 <div class="col-md-12">
                                     <div class="row ">
                                         <div class="title-widget col-12">
-                                            <h3 class="text-center title-services mb-4 animate-third scroll-base">Нормативная
+                                            <h3 class="text-center title-services mb-4 animate-third scroll-base"
+                                                id="scroll-base">Нормативная
                                                 база</h3>
                                         </div>
                                         <div class="col-cxs-12 col-sm-6 col-md-4 card_wrap pb-2 pr-2"

@@ -3979,6 +3979,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['data'],
   mounted: function mounted() {}
@@ -43589,7 +43592,10 @@ var staticRenderFns = [
     return _c("div", { staticClass: "title-widget col-12 animate-first" }, [
       _c(
         "h3",
-        { staticClass: "text-center title-services mb-4 scroll-services" },
+        {
+          staticClass: "text-center title-services mb-4 scroll-services",
+          attrs: { id: "scroll-services" }
+        },
         [_vm._v("Услуги")]
       )
     ])
@@ -43617,7 +43623,8 @@ var staticRenderFns = [
         "h3",
         {
           staticClass:
-            "text-center title-services mb-5 animate-second scroll-sertification"
+            "text-center title-services mb-5 animate-second scroll-sertification",
+          attrs: { id: "scroll-sertification" }
         },
         [
           _vm._v(
@@ -43636,7 +43643,8 @@ var staticRenderFns = [
         "h3",
         {
           staticClass:
-            "text-center title-services mb-4 animate-third scroll-base"
+            "text-center title-services mb-4 animate-third scroll-base",
+          attrs: { id: "scroll-base" }
         },
         [
           _vm._v(

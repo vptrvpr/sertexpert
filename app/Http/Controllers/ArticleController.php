@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Category;
-use App\Page;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -18,7 +17,7 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showArticle( $id )
+    public function showArticle( $category,$title,$id )
     {
         $article = Article::where( 'id', $id )->get();
 
@@ -41,12 +40,14 @@ class ArticleController extends Controller
 
         $category = Category::where( 'name', $article[ 'category' ] )->first();
 
-        $newArticle                = new Article();
-        $newArticle->title         = $article[ 'title' ];
-        $newArticle->description   = $article[ 'description' ];
-        $newArticle->text          = $article[ 'text' ];
-        $newArticle->img           = $article[ 'image' ] ? 'images/articles/' . $article[ 'image' ] : NULL;
-        $newArticle->categories_id = $category->id;
+        $newArticle                   = new Article();
+        $newArticle->title            = $article[ 'title' ];
+        $newArticle->description      = $article[ 'description' ];
+        $newArticle->text             = $article[ 'text' ];
+        $newArticle->img              = $article[ 'image' ] ? 'images/articles/' . $article[ 'image' ] : NULL;
+        $newArticle->title_page       = $article[ 'title_page' ];
+        $newArticle->description_page = $article[ 'description_page' ];
+        $newArticle->categories_id    = $category->id;
         $newArticle->save();
     }
 
@@ -131,8 +132,10 @@ class ArticleController extends Controller
     {
         $editArticle = $request->get( 'article' );
 
-        $article       = Article::where( 'id', $editArticle[ 'id' ] )->first();
-        $article->text = $editArticle[ 'text' ];
+        $article                   = Article::where( 'id', $editArticle[ 'id' ] )->first();
+        $article->text             = $editArticle[ 'text' ];
+        $article->title_page       = $editArticle[ 'title_page' ];
+        $article->description_page = $editArticle[ 'description_page' ];
         $article->save();
     }
 }

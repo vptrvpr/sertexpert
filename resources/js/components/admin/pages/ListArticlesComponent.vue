@@ -98,6 +98,19 @@
                                                         </button>
 
                                                     </div>
+                                                    <div class="container">
+                                                        <div class="form-group w-100 mt-3">
+                                                            <label class="font-admin">Title (для страницы)</label>
+                                                            <textarea type="text" v-model="article.title_page" class="form-control font-admin" placeholder="Title (для страницы)"></textarea>
+                                                        </div>
+
+                                                        <div class="form-group w-100 mt-3">
+                                                            <label class="font-admin">Description (для страницы)</label>
+                                                            <textarea type="text" v-model="article.description_page" class="form-control font-admin" placeholder="Description (для страницы)"></textarea>
+                                                        </div>
+                                                    </div>
+
+
                                                     <div class="modal-body">
                                                         <div class="row">
                                                             <div class="col-md-1"></div>

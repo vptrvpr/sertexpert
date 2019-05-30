@@ -14,7 +14,7 @@
                 <section class="our-news">
                     <div class="row" v-if="articles.length">
                         <!-- a news -->
-                        <a class="col-md-12 news-list bottom_60" v-for="article in articles" :href="'article/'+article.id">
+                        <a class="col-md-12 news-list bottom_60" v-for="article in articles" :href="article.trans_title_category+'/'+article.trans_title">
                             <article class="news-box row">
                                 <figure class="col-md-4" v-if="article.img">
                                     <img  :src="url+article.img" alt="">

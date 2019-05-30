@@ -67,7 +67,7 @@
                                                 <h3 class="articles-title">{{category.name}}</h3>
                                                 <hr class="top_15 bottom_15 col-md-12">
                                                 <div class="article-link" v-for="article in category.article">
-                                                    <a :href="'article/'+article.id">{{article.title}}</a>
+                                                    <a :href="article.trans_title_category+'/'+article.trans_title">{{article.title}}</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,7 +104,7 @@
                                             <h3 class="articles-title">{{category.name}}</h3>
                                             <hr class="top_15 bottom_15 col-md-12">
                                             <div class="article-link" v-for="article in category.article">
-                                                <a :href="'article/'+article.id">{{article.title}}</a>
+                                                <a :href="article.trans_title_category+'/'+article.trans_title">{{article.title}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@
                                                 <h3 class="articles-title">{{category.name}}</h3>
                                                 <hr class="top_15 bottom_15 col-md-12">
                                                 <div class="article-link" v-for="article in category.article">
-                                                    <a :href="'article/'+article.id">{{article.title}}</a>
+                                                    <a :href="article.trans_title_category+'/'+article.trans_title">{{article.title}}</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -9,6 +9,7 @@ use App\Info\Info;
 use App\Question;
 use Illuminate\Http\Request;
 use mysql_xdevapi\Session;
+use App\Translate\ArticleTitleTranslate;
 
 class PageController extends Controller
 {
@@ -30,9 +31,6 @@ class PageController extends Controller
 
         setcookie("city", $city);
 
-
-
-
         $info = new Info();
         $info = $info->getInfoIndex();
 
@@ -50,6 +48,9 @@ class PageController extends Controller
         $category = Category::where( 'name', Category::NEWS )->first();
 
         $articles = $category->articles;
+
+        $translate = new ArticleTitleTranslate();
+        $articles = $translate->articleTitleTranslate($articles);
 
         return view( 'pages.news', compact( 'articles' ) );
     }
@@ -109,6 +110,9 @@ class PageController extends Controller
         $title = $request->get( 'search' );
 
         $articles = Article::where( 'title', 'LIKE', '%' . $title . '%' )->limit( 40 )->get();
+
+        $translate = new ArticleTitleTranslate();
+        $articles = $translate->articleTitleTranslate($articles);
 
         return view( 'pages.search', compact( 'articles', 'title' ) );
     }

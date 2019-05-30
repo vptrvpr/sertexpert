@@ -221,7 +221,7 @@
                     method: 'delete',
                     url: '/contacts/' + id
                 } ).then( ( response ) => {
-                    this.getQuestions();
+                    this.getContact();
                 } );
             },
 

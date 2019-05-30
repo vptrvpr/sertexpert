@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="{{ env('APP_URL') }}/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ env('APP_URL') }}/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="{{ env('APP_URL') }}/css/admin/style.css?12">
+    <link rel="stylesheet" href="{{ env('APP_URL') }}/css/admin/style.css?1213">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal-default-theme.css">
 </head>
@@ -43,6 +43,6 @@
 <script src="{{ env('APP_URL') }}/js/admin/off-canvas.js"></script>
 <script src="{{ env('APP_URL') }}/js/admin/misc.js"></script>
 <script src="{{ env('APP_URL') }}/js/admin/dashboard.js"></script>
-<script src="{{ env('APP_URL') }}/js/app.js?1232"></script>
+<script src="{{ env('APP_URL') }}/js/app.js?12323"></script>
 </body>
 </html>

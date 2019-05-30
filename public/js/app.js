@@ -2513,7 +2513,7 @@ __webpack_require__.r(__webpack_exports__);
         method: 'delete',
         url: '/contacts/' + id
       }).then(function (response) {
-        _this2.getQuestions();
+        _this2.getContact();
       });
     },
     editContact: function editContact(index) {
@@ -2684,6 +2684,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['data'],
   data: function data() {
@@ -2694,7 +2704,9 @@ __webpack_require__.r(__webpack_exports__);
         title: '',
         description: '',
         text: '',
-        image: ''
+        image: '',
+        description_page: '',
+        title_page: ''
       },
       saveSuccess: false,
       intervalid1: null
@@ -2729,7 +2741,9 @@ __webpack_require__.r(__webpack_exports__);
           title: '',
           description: '',
           text: '',
-          image: ''
+          image: '',
+          description_page: '',
+          title_page: ''
         };
         _this.intervalid1 = setInterval(function () {
           self.saveSuccess = false;
@@ -2762,6 +2776,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -40653,6 +40680,76 @@ var render = function() {
                     })
                   ]),
                   _vm._v(" "),
+                  _c("div", { staticClass: "form-group w-100 mt-3" }, [
+                    _c("label", { staticClass: "font-admin" }, [
+                      _vm._v("Title (для страницы)")
+                    ]),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.newArticle.title_page,
+                          expression: "newArticle.title_page"
+                        }
+                      ],
+                      staticClass: "form-control font-admin",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Title (для страницы)"
+                      },
+                      domProps: { value: _vm.newArticle.title_page },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.newArticle,
+                            "title_page",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group w-100 mt-3" }, [
+                    _c("label", { staticClass: "font-admin" }, [
+                      _vm._v("Description (для страницы)")
+                    ]),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.newArticle.description_page,
+                          expression: "newArticle.description_page"
+                        }
+                      ],
+                      staticClass: "form-control font-admin",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Description (для страницы)"
+                      },
+                      domProps: { value: _vm.newArticle.description_page },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.newArticle,
+                            "description_page",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
                   _c("div", { staticClass: "input-group col-xs-12" }, [
                     _c("div", { staticClass: "file-upload" }, [
                       _c("label", [_vm._v("Выберите фото")]),
@@ -41078,6 +41175,98 @@ var render = function() {
                                     ),
                                     _vm._v(" "),
                                     _vm._m(2, true)
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "container" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-group w-100 mt-3" },
+                                      [
+                                        _c(
+                                          "label",
+                                          { staticClass: "font-admin" },
+                                          [_vm._v("Title (для страницы)")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: article.title_page,
+                                              expression: "article.title_page"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "form-control font-admin",
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Title (для страницы)"
+                                          },
+                                          domProps: {
+                                            value: article.title_page
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                article,
+                                                "title_page",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-group w-100 mt-3" },
+                                      [
+                                        _c(
+                                          "label",
+                                          { staticClass: "font-admin" },
+                                          [_vm._v("Description (для страницы)")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: article.description_page,
+                                              expression:
+                                                "article.description_page"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "form-control font-admin",
+                                          attrs: {
+                                            type: "text",
+                                            placeholder:
+                                              "Description (для страницы)"
+                                          },
+                                          domProps: {
+                                            value: article.description_page
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                article,
+                                                "description_page",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "modal-body" }, [
@@ -43327,7 +43516,10 @@ var render = function() {
                                             "a",
                                             {
                                               attrs: {
-                                                href: "article/" + article.id
+                                                href:
+                                                  article.trans_title_category +
+                                                  "/" +
+                                                  article.trans_title
                                               }
                                             },
                                             [_vm._v(_vm._s(article.title))]
@@ -43433,7 +43625,10 @@ var render = function() {
                                           "a",
                                           {
                                             attrs: {
-                                              href: "article/" + article.id
+                                              href:
+                                                article.trans_title_category +
+                                                "/" +
+                                                article.trans_title
                                             }
                                           },
                                           [_vm._v(_vm._s(article.title))]
@@ -43531,7 +43726,10 @@ var render = function() {
                                             "a",
                                             {
                                               attrs: {
-                                                href: "article/" + article.id
+                                                href:
+                                                  article.trans_title_category +
+                                                  "/" +
+                                                  article.trans_title
                                               }
                                             },
                                             [_vm._v(_vm._s(article.title))]
@@ -43800,7 +43998,10 @@ var render = function() {
                   "a",
                   {
                     staticClass: "col-md-12 news-list bottom_60",
-                    attrs: { href: "article/" + article.id }
+                    attrs: {
+                      href:
+                        article.trans_title_category + "/" + article.trans_title
+                    }
                   },
                   [
                     _c("article", { staticClass: "news-box row" }, [
@@ -43986,7 +44187,12 @@ var render = function() {
                       "a",
                       {
                         staticClass: "col-md-12 news-list bottom_60",
-                        attrs: { href: "article/" + article.id }
+                        attrs: {
+                          href:
+                            article.trans_title_category +
+                            "/" +
+                            article.trans_title
+                        }
                       },
                       [
                         _c("article", { staticClass: "news-box row" }, [

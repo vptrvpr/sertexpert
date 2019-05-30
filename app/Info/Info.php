@@ -4,6 +4,7 @@ namespace App\Info;
 
 
 use App\Page;
+use App\Translate\ArticleTitleTranslate;
 
 class Info
 {
@@ -19,7 +20,9 @@ class Info
             $page->category = $page->categories()->get();
 
             foreach($page->category as $category){
-                $category->article = $category->articles()->get();
+                $translate = new ArticleTitleTranslate();
+                $articles = $translate->articleTitleTranslate($category->articles()->get());
+                $category->article = $articles;
             }
         }
 

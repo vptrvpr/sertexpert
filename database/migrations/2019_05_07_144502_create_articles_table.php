@@ -19,6 +19,8 @@ class CreateArticlesTable extends Migration
             $table->string('description')->nullable();
             $table->string('text')->nullable();
             $table->string('img')->nullable();
+            $table->string('description_page')->nullable();
+            $table->string('title_page')->nullable();
             $table->integer('categories_id')->nullable();
             $table->timestamps();
         });

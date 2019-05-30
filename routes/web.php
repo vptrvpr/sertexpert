@@ -35,7 +35,7 @@ Route::get( '/home', 'HomeController@index' )->name( 'home' );
 /**
  * Articles
  */
-Route::get( '/article/{id}', 'ArticleController@showArticle' )->name( 'showArticle' );
+Route::get( '/{category}/{title}_{id}', 'ArticleController@showArticle' )->name( 'showArticle' );
 Route::post( '/articles/load-image', 'ArticleController@loadImageArticle' )->name( 'loadImageArticle' );
 Route::post( '/articles/create', 'ArticleController@createArticle' )->name( 'createArticle' );
 Route::post( '/articles/get/', 'ArticleController@getArticles' )->name( 'getArticles' );

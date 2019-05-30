@@ -51,6 +51,16 @@
                                         <textarea type="text" v-model="newArticle.description" class="form-control font-admin" placeholder="Описание"></textarea>
                                     </div>
 
+                                    <div class="form-group w-100 mt-3">
+                                        <label class="font-admin">Title (для страницы)</label>
+                                        <textarea type="text" v-model="newArticle.title_page" class="form-control font-admin" placeholder="Title (для страницы)"></textarea>
+                                    </div>
+
+                                    <div class="form-group w-100 mt-3">
+                                        <label class="font-admin">Description (для страницы)</label>
+                                        <textarea type="text" v-model="newArticle.description_page" class="form-control font-admin" placeholder="Description (для страницы)"></textarea>
+                                    </div>
+
                                     <div class="input-group col-xs-12">
                                         <div class="file-upload">
                                             <label>Выберите фото</label><br>
@@ -117,7 +127,9 @@
                     title: '',
                     description: '',
                     text: '',
-                    image: ''
+                    image: '',
+                    description_page: '',
+                    title_page: ''
 
 
                 },
@@ -157,7 +169,9 @@
                         title: '',
                         description: '',
                         text: '',
-                        image: ''
+                        image: '',
+                        description_page: '',
+                        title_page: ''
                     };
 
                     this.intervalid1 = setInterval(function(){

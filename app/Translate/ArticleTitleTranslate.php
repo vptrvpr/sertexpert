@@ -12,6 +12,13 @@ use App\Translate\Translate;
 
 class ArticleTitleTranslate
 {
+    /**
+     * Переделывает статьи для ЧПУ ссылок
+     *
+     * @param $articles
+     *
+     * @return mixed
+     */
     public function articleTitleTranslate($articles){
         $translate = new Translate();
         foreach($articles as $article){

@@ -3337,6 +3337,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['url'],
   data: function data() {
@@ -42091,7 +42099,9 @@ var render = function() {
                   attrs: { src: "images/logo-light.png", alt: "" }
                 }),
             _vm._v(" "),
-            _c("p", { staticClass: "ml-3" }, [_vm._v("© 2019 SertExpert")])
+            _c("p", { staticClass: "ml-1 copyright-p" }, [
+              _vm._v("© 2019 SertExpert")
+            ])
           ]),
           _vm._v(" "),
           _vm._m(0),
@@ -42184,6 +42194,20 @@ var staticRenderFns = [
             })
           ]
         )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "develop-cps" }, [
+        _c("p", { staticClass: "mt-3" }, [
+          _c("i", { staticClass: "fas fa-code" }),
+          _vm._v(" Разработанно "),
+          _c(
+            "a",
+            {
+              attrs: { href: "http://cps-company.ru?visit=5", target: "_blank" }
+            },
+            [_vm._v("«CPS Company»")]
+          )
+        ])
       ])
     ])
   }

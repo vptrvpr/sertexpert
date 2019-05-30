@@ -10,7 +10,9 @@
                         <img v-else class="logo"
                              src="images/logo-light.png"
                              alt="">
-                        <p class="ml-3">© 2019 SertExpert</p>
+
+                        <p class="ml-1 copyright-p">© 2019 SertExpert</p>
+
                     </div>
                     <div class="col-md-4 d-sm-none d-md-block">
                         <div class="social">
@@ -23,6 +25,12 @@
                             <a href="https://www.youtube.com/channel/UCRPY3ZSj3bKYaI3rcolOG-Q?guided_help_flow=3"
                                target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i> </a>
                         </div>
+                        <div class="develop-cps">
+                            <p class="mt-3"><i class="fas fa-code"></i> Разработанно <a href="http://cps-company.ru?visit=5"
+                                                                                        target="_blank">&laquo;CPS Company&raquo;</a>
+                            </p>
+                        </div>
+
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12 d-none d-sm-block getintouch">
                         <a href="#">

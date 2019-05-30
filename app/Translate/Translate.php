@@ -6,42 +6,8 @@ namespace App\Translate;
 class Translate
 {
     /**
+     * Переводит в латницу
      *
-     * Переводчик в кириллицу
-     *
-     * @param $input
-     *
-     * @return mixed|string
-     */
-    public function translateToRussia()
-    {
-        $cyr    = array(
-            "Щ", "Ш", "Ч", "Ц", "Ю", "Я", "Ж", "А", "Б", "В",
-            "Г", "Д", "Е", "Ё", "З", "И", "Й", "К", "Л", "М", "Н",
-            "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ь", "Ы", "Ъ",
-            "Э", "Є", "Ї", "І",
-            "щ", "ш", "ч", "ц", "ю", "я", "ж", "а", "б", "в",
-            "г", "д", "е", "ё", "з", "и", "й", "к", "л", "м", "н",
-            "о", "п", "р", "с", "т", "у", "ф", "х", "ь", "ы", "ъ",
-            "э", "є", "ї", "і",
-        );
-        $lat    = array(
-            "Shch", "Sh", "Ch", "C", "Yu", "Ya", "J", "A", "B", "V",
-            "G", "D", "E", "E", "Z", "I", "y", "K", "L", "M", "N",
-            "O", "P", "R", "S", "T", "U", "F", "H", "",
-            "Y", "", "E", "E", "Yi", "I",
-            "shch", "sh", "ch", "c", "Yu", "Ya", "j", "a", "b", "v",
-            "g", "d", "e", "e", "z", "i", "y", "k", "l", "m", "n",
-            "o", "p", "r", "s", "t", "u", "f", "h",
-            "", "y", "", "e", "e", "yi", "i",
-        );
-        $string = str_replace( $lat, $cyr, $this->str );
-        $string = str_replace( "_", " ", $string );
-        return ( $string );
-    }
-
-
-    /**
      * @param $str
      *
      * @return string
@@ -77,6 +43,13 @@ class Translate
     }
 
 
+    /**
+     * Переводит для ссылки
+     *
+     * @param $str
+     *
+     * @return string|string[]|null
+     */
     public function strUrlCHPU($str)
     {
         // переводим в транслит

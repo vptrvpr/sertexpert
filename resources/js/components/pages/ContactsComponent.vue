@@ -20,8 +20,8 @@
                                 <div class="col-xl-7 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                     <h6>Город: {{contacts.city}}</h6>
                                     <h6>Адрес: {{contacts.address}}</h6>
-                                    <h6>Почта: <a class="contacts-info" :href="'tel:'+contacts.phone">{{contacts.phone}}</a></h6>
-                                    <h6>Телефон: <a class="contacts-info" :href="'mailto:'+contacts.email">{{contacts.email}}</a></h6>
+                                    <h6>Телефон: <a class="contacts-info" :href="'tel:'+contacts.phone">{{contacts.phone}}</a></h6>
+                                    <h6>Почта:<a class="contacts-info" :href="'mailto:'+contacts.email">{{contacts.email}}</a></h6>
                                 </div>
                                 <hr class="col-md-12 bottom_30 top_30">
                             </article>

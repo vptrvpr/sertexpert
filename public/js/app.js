@@ -43372,7 +43372,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("h6", [
-                        _vm._v("Почта: "),
+                        _vm._v("Телефон: "),
                         _c(
                           "a",
                           {
@@ -43384,7 +43384,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("h6", [
-                        _vm._v("Телефон: "),
+                        _vm._v("Почта:"),
                         _c(
                           "a",
                           {
@@ -57815,8 +57815,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Ospanel 2\OSPanel\domains\sertexpert\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Ospanel 2\OSPanel\domains\sertexpert\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\OSPanel\domains\sertexpert\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\OSPanel\domains\sertexpert\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -10,7 +10,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{env('APP_URL')}}css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}css/colors/red.css"/>
-    <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css?12232"/>
+    <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css?122322"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal-default-theme.css">
 
@@ -69,7 +69,7 @@
     @yield('content')
 </div>
 
-<script type="text/javascript" src="{{env('APP_URL')}}js/app.js?12212"></script>
+<script type="text/javascript" src="{{env('APP_URL')}}js/app.js?122122"></script>
 <script src="{{env('APP_URL')}}js/jquery-2.1.4.min.js"></script>
 <script src="{{env('APP_URL')}}js/remodal.js"></script>
 <script type="text/javascript" src="{{env('APP_URL')}}js/rotate3Di-master/jquery-css-transform/j-c-t.js"></script>

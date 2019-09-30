@@ -118,9 +118,7 @@
                                                                 <editor v-model="article.text"
                                                                         api-key="f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v"
                                                                         plugins="advlist autolink link image lists charmap print preview"
-                                                                        custom_colors="true"
-                                                                        dialog_type="modal"
-                                                                        selector="textarea"
+                                                                        custom_colors="true"s
                                                                         toolbar="forecolor backcolor | undo redo | styleselect | bold italic | link image | numlist bullist"
                                                                         :init="{height: 600,color_map: [
                                                     '1E1A1A','c3a993', 'Default',

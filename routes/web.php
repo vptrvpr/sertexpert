@@ -38,6 +38,8 @@ Route::get( '/home', 'HomeController@index' )->name( 'home' );
 Route::get( '/{category}/{title}_{id}', 'ArticleController@showArticle' )->name( 'showArticle' );
 Route::post( '/articles/load-image', 'ArticleController@loadImageArticle' )->name( 'loadImageArticle' );
 Route::post( '/articles/create', 'ArticleController@createArticle' )->name( 'createArticle' );
+Route::get( '/article/edit/show/{articleId}', 'ArticleController@editIndex' );
+Route::get( '/article/get/{articleId}', 'ArticleController@getArticleById' );
 Route::post( '/articles/get/', 'ArticleController@getArticles' )->name( 'getArticles' );
 Route::get( '/articles/delete/{id}', 'ArticleController@deleteArticles' )->name( 'deleteArticles' );
 Route::post( '/articles/save', 'ArticleController@saveArticles' )->name( 'saveArticles' );

@@ -44,6 +44,7 @@
 <script src="{{ env('APP_URL') }}/js/admin/misc.js"></script>
 <script src="{{ env('APP_URL') }}/js/admin/dashboard.js"></script>
 <script src="{{ env('APP_URL') }}/js/app.js?12323"></script>
+<<<<<<< HEAD
 <script>
 <<<<<<< HEAD
 	$(document).on('focusin', function (e) {
@@ -60,5 +61,7 @@
     });
 >>>>>>> e0053e37ab1851e9ad72bef9c829a1ae6c1c0ea1
 </script>
+=======
+>>>>>>> 5e7832a5adda4ccbae60e54ba356853e9630ab1d
 </body>
 </html>

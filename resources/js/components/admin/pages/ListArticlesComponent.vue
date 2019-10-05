@@ -78,76 +78,13 @@
                                             {{article.category_name}}
                                         </td>
                                         <td>
-                                            <a class="btn btn-success btn-with-icon"><i
-                                                class="mdi mdi-border-color" data-toggle="modal"
-                                                :data-target="'.bd-example-modal-lg-'+article.id"
+                                            <a class="btn btn-success btn-with-icon"
+                                               :href="'/article/edit/show/'+article.id"><i
+                                                class="mdi mdi-border-color"
                                                 style="color:white;"></i></a>
                                             <a class="btn btn-danger btn-with-icon" @click="destroyArticle(article.id)"><i
                                                 class="mdi mdi-delete-forever" style="color:white;"></i></a>
                                         </td>
-                                        <div :class="'modal fade bd-example-modal-lg-'+article.id" tabindex="-1"
-                                             role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" style="margin-top: 100px">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h2 class="modal-title" id="exampleModalLongTitle">
-                                                            Редактирование статьи - {{article.title}}</h2>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-
-                                                    </div>
-                                                    <div class="container">
-                                                        <div class="form-group w-100 mt-3">
-                                                            <label class="font-admin">Title (для страницы)</label>
-                                                            <textarea type="text" v-model="article.title_page" class="form-control font-admin" placeholder="Title (для страницы)"></textarea>
-                                                        </div>
-
-                                                        <div class="form-group w-100 mt-3">
-                                                            <label class="font-admin">Description (для страницы)</label>
-                                                            <textarea type="text" v-model="article.description_page" class="form-control font-admin" placeholder="Description (для страницы)"></textarea>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="modal-body">
-                                                        <div class="row">
-                                                            <div class="col-md-1"></div>
-                                                            <div class="col-md-10">
-                                                                <editor v-model="article.text"
-                                                                        api-key="f5b040i73ebkt63xkw5q3t2eycahtfyij48m616q4ezjyg4v"
-                                                                        plugins="advlist autolink link image lists charmap print preview"
-                                                                        custom_colors="true"s
-                                                                        toolbar="forecolor backcolor | undo redo | styleselect | bold italic | link image | numlist bullist"
-                                                                        :init="{height: 600,color_map: [
-                                                    '1E1A1A','c3a993', 'Default',
-                                                    ]}"
-                                                                ></editor>
-                                                            </div>
-                                                            <div class="col-md-1"></div>
-                                                            <div class="col-md-12 mt-3">
-                                                                <div v-if="saveSuccess"
-                                                                     class="alert alert-success d-flex justify-content-center"
-                                                                     role="alert">
-                                                                    Изменения успешно сохранены!
-                                                                </div>
-                                                                <div class="d-flex justify-content-center">
-                                                                    <button class="btn btn-success"
-                                                                            @click="saveArticle(index)">Сохранить
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Закрыть
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -176,7 +113,7 @@
 
 <script>
     export default {
-        props: [ 'data' ],
+        props: ['data'],
         data: function () {
             return {
                 articles: {},
@@ -195,13 +132,13 @@
              * Get all Articles
              */
             getArticles: function () {
-                axios( {
+                axios({
                     method: 'post',
                     url: '/articles/get',
-                    data: { search: this.search }
-                } ).then( ( response ) => {
+                    data: {search: this.search}
+                }).then((response) => {
                     this.articles = response.data;
-                } );
+                });
             },
 
 
@@ -210,31 +147,31 @@
              *
              * @param id
              */
-            destroyArticle: function ( id ) {
-                axios( {
+            destroyArticle: function (id) {
+                axios({
                     method: 'get',
                     url: '/articles/delete/' + id
-                } ).then( ( response ) => {
+                }).then((response) => {
                     this.getArticles();
-                } );
+                });
             },
 
 
-            saveArticle: function ( index ) {
-                axios( {
+            saveArticle: function (index) {
+                axios({
                     method: 'post',
                     url: '/articles/save',
-                    data: { article: this.articles[ index ] }
-                } ).then( ( response ) => {
+                    data: {article: this.articles[index]}
+                }).then((response) => {
                     const self = this;
                     this.saveSuccess = true;
 
                     this.getArticles();
 
-                    this.intervalid1 = setInterval( function () {
+                    this.intervalid1 = setInterval(function () {
                         self.saveSuccess = false;
-                    }, 3000 );
-                } );
+                    }, 3000);
+                });
             }
 
         }

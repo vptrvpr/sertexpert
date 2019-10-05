@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </section>
-
+            <questions-section-component></questions-section-component>
             <div class="cont">
                 <section id="portfolio" class="portfolio">
                     <div class="container"><a name="services"></a>
@@ -156,7 +156,7 @@
                 <hr class="top_90 bottom_90 col-md-8">
             </div> <!-- cont end -->
         </div> <!-- wrapper end -->
-        <questions-section-component></questions-section-component>
+        <questions-section-2-component></questions-section-2-component>
         <footer-component></footer-component>
 
     </div>

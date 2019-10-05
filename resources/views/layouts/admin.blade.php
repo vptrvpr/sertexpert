@@ -44,13 +44,5 @@
 <script src="{{ env('APP_URL') }}/js/admin/misc.js"></script>
 <script src="{{ env('APP_URL') }}/js/admin/dashboard.js"></script>
 <script src="{{ env('APP_URL') }}/js/app.js?12323"></script>
-<script>
-    $(document).on('focusin', function (e) {
-        if ($(e.target).closest(".tox-tinymce-aux, .moxman-window, .tam-assetmanager-root").length) {
-            e.stopImmediatePropagation();
-            console.log(123123123123);
-        }
-    });
-</script>
 </body>
 </html>

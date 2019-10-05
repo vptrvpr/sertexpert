@@ -48,6 +48,7 @@ Vue.component('questions-section-2-component', require('./components/layouts/Que
  */
 Vue.component('create-article-component', require('./components/admin/pages/CreateArticleComponent.vue').default);
 Vue.component('list-articles-component', require('./components/admin/pages/ListArticlesComponent.vue').default);
+Vue.component('admin-edit-article-component', require('./components/admin/pages/EditArticleComponent.vue').default);
 Vue.component('admin-question-component', require('./components/admin/pages/ListQuestionsComponent.vue').default);
 Vue.component('admin-contact-component', require('./components/admin/pages/ContactsComponent.vue').default);
 

@@ -27,23 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
-    <!— скрипт calltracking —>
-
-    <script type="text/javascript">
-
-        (function ct_load_script() {
-
-            var ct = document.createElement('script'); ct.type = 'text/javascript';
-
-            ct.src = document.location.protocol+'//cc.calltracking.ru/phone.9879f.9003.async.js?nc='..(new Date().getTime()/300000);
-
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
-
-        })();
-
-    </script>
-
-    <!— скрипт calltracking end-->
+    <script type="text/javascript"> (function ct_load_script() { var ct = document.createElement('script'); ct.type = 'text/javascript'; ct.src = document.location.protocol+'//cc.calltracking.ru/phone.9879f.9003.async.js?nc='+Math.floor(new Date().getTime()/300000); var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s); })(); </script>
 </head>
 <body>
 

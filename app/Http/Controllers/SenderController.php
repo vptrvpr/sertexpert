@@ -14,7 +14,7 @@ class SenderController extends Controller
         $contacts = $request->get('contacts');
 
         Mail::send('emails.contacts', ['contacts' => $contacts], function ($m) {
-            $m->from('info@cps-company.ru', 'Вопрос - SertExpert');
+            $m->from('zapros@sertexpert.com', 'Вопрос - SertExpert');
             $m->to(env('EMAIL_NOTIF'))->subject('Остался вопрос?');
         });
     }
@@ -27,7 +27,7 @@ class SenderController extends Controller
         $contacts = $request->get('contacts');
 
         Mail::send('emails.contacts2', ['contacts' => $contacts], function ($m) {
-            $m->from('info@cps-company.ru', 'Вопрос - SertExpert');
+            $m->from('zapros@sertexpert.com', 'Вопрос - SertExpert');
             $m->to(env('EMAIL_NOTIF'))->subject('Остался вопрос?');
         });
     }

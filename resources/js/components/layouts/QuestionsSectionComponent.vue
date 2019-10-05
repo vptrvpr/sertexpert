@@ -61,8 +61,9 @@
 
         methods: {
             sendSlackNotification: function () {
-                this.successSend = true;
                 yaCounter53728564.reachGoal('order');
+                gtag('event', 'send', {'event_category': 'order','event_label': 'form'});
+                this.successSend = true;
                 axios( {
                     method: 'post',
                     url: '/sender/contact-send',

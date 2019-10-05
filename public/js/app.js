@@ -4054,6 +4054,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['data'],
   mounted: function mounted() {}
@@ -43481,7 +43483,11 @@ var render = function() {
         [
           _vm._m(0),
           _vm._v(" "),
+          _c("div", { staticClass: "mt-5" }),
+          _vm._v(" "),
           _c("questions-section-component"),
+          _vm._v(" "),
+          _c("div", { staticClass: "pb-5" }),
           _vm._v(" "),
           _c("div", { staticClass: "cont" }, [
             _c(

@@ -47,7 +47,7 @@ class ArticleController extends Controller
         $newArticle->img              = $article[ 'image' ] ? 'images/articles/' . $article[ 'image' ] : NULL;
         $newArticle->title_page       = $article[ 'title_page' ];
         $newArticle->description_page = $article[ 'description_page' ];
-        $newArticle->categories_id    = $category->id;
+//        $newArticle->categories_id    = $category->id;
         $newArticle->save();
     }
 
@@ -86,8 +86,8 @@ class ArticleController extends Controller
         $searchArticles = [];
 
         foreach( $articles as $article ) {
-            $article->page_name     = $article->category->page->name;
-            $article->category_name = $article->category->name;
+//            $article->page_name     = $article->category->page->name;
+//            $article->category_name = $article->category->name;
         }
 
         if( $search[ 'page' ] || $search[ 'category' ] ) {

@@ -65,7 +65,9 @@
 
         methods: {
             sendSlackNotification: function () {
+                yaCounter53728564.reachGoal('order');
                 this.successSend = true;
+
                 axios( {
                     method: 'post',
                     url: '/sender/contact-send-2',

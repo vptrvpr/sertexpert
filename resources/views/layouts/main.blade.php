@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}css/colors/red.css"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css?122322"/>
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal.css">
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/remodal-default-theme.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}css/remodal.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}css/remodal-default-theme.css">
 
 
 
@@ -27,6 +27,23 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
+    <!— скрипт calltracking —>
+
+    <script type="text/javascript">
+
+        (function ct_load_script() {
+
+            var ct = document.createElement('script'); ct.type = 'text/javascript';
+
+            ct.src = document.location.protocol+'//cc.calltracking.ru/phone.9879f.9003.async.js?nc='..(new Date().getTime()/300000);
+
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
+
+        })();
+
+    </script>
+
+    <!— скрипт calltracking end-->
 </head>
 <body>
 
@@ -43,28 +60,22 @@
     gtag( 'config', 'UA-140486684-1' );
 </script>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    ( function ( m, e, t, r, i, k, a ) {
-        m[ i ] = m[ i ] || function () {
-            ( m[ i ].a = m[ i ].a || [] ).push( arguments )
-        };
-        m[ i ].l = 1 * new Date();
-        k = e.createElement( t ), a = e.getElementsByTagName( t )
-            [ 0 ], k.async = 1, k.src = r, a.parentNode.insertBefore( k, a )
-    } )
-    ( window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym" );
-    ym( 53728564, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true
-    } );
-</script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/53728564" style="position:absolute; left:-9999px;" alt=""/></div>
-</noscript>
+<!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-<!-- /Yandex.Metrika counter -->
+    ym(53728564, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53728564" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!— /Yandex.Metrika counter —>
+
 <div id="app">
     @yield('content')
 </div>

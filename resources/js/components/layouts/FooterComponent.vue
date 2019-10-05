@@ -26,6 +26,8 @@
                                target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i> </a>
                         </div>
                         <div class="develop-cps">
+                            <p class="mt-3"><i class="fas fa-code"></i>Оказываем консалтинговые услуги в сертификации и экспертизе.
+                            </p>
                             <p class="mt-3"><i class="fas fa-code"></i> Разработанно <a href="http://cps-company.ru?visit=5"
                                                                                         target="_blank">&laquo;CPS Company&raquo;</a>
                             </p>

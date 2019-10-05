@@ -45,11 +45,20 @@
 <script src="{{ env('APP_URL') }}/js/admin/dashboard.js"></script>
 <script src="{{ env('APP_URL') }}/js/app.js?12323"></script>
 <script>
+<<<<<<< HEAD
 	$(document).on('focusin', function (e) {
     if ($(e.target).closest(".tox-tinymce-aux, .moxman-window, .tam-assetmanager-root").length) {
         e.stopImmediatePropagation();
     }
 });
+=======
+    $(document).on('focusin', function (e) {
+        if ($(e.target).closest(".tox-tinymce-aux, .moxman-window, .tam-assetmanager-root").length) {
+            e.stopImmediatePropagation();
+            console.log(123123123123);
+        }
+    });
+>>>>>>> e0053e37ab1851e9ad72bef9c829a1ae6c1c0ea1
 </script>
 </body>
 </html>

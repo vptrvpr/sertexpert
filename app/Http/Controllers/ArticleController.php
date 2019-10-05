@@ -86,8 +86,8 @@ class ArticleController extends Controller
         $searchArticles = [];
 
         foreach ($articles as $article) {
-//            $article->page_name     = $article->category->page->name;
-//            $article->category_name = $article->category->name;
+            $article->page_name     = $article->category->page->name;
+            $article->category_name = $article->category->name;
         }
 
         if ($search['page'] || $search['category']) {

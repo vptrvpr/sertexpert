@@ -10,7 +10,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{env('APP_URL')}}css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}css/colors/red.css"/>
-    <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css?1223222"/>
+    <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css?1223222523"/>
     <link rel="stylesheet" href="{{env('APP_URL')}}css/remodal.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}css/remodal-default-theme.css">
 
@@ -76,7 +76,7 @@
 <script src="{{env('APP_URL')}}js/app-particels.js"></script>
 <script src="{{env('APP_URL')}}js/jquery.hover3d.js"></script>
 <script src="{{env('APP_URL')}}js/coockie.js"></script>
-<script src="{{env('APP_URL')}}js/main.js?122222225"></script>
+<script src="{{env('APP_URL')}}js/main.js?1222222254"></script>
 <script src="{{env('APP_URL')}}js/animatedModal.js"></script>
 
 </body>
